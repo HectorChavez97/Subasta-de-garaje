@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheet.css">
+
+    <!-- Font Awesome -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a id="link" href="index.html"><img class="logo"
+                src="https://jumpseller.s3.eu-west-1.amazonaws.com/store/alfonso-dumas/assets/subastas.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contacto</a>
+                </li>
+                <div class="login-div">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Mi cuenta
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="subastando.html">Subastando</a>
+                            <a class="dropdown-item" href="subastas_activas.html">Subastas activas</a>
+                            <a class="dropdown-item" href="historial_subastas.html">Historial de subastas</a>
+                            <a class="dropdown-item" href="#">Salir</a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </ul>
+        </div>
+    </nav>
+
+    <div class="jumbotron">
+        <h1 class="display-3 text-center">Publica tu subasta</h1>
+        <hr class="my-2">
+
+
+        <form>
+            <div class="form-group half-width">
+                <label for="titulo">Titulo</label>
+                <input type="text" class="form-control" id="titulo" placeholder="TV Samsung Smart TV" required>
+            </div>
+
+            <div class="form-group half-width">
+                <label for="text">Descripcion</label>
+                <textarea class="form-control" name="descripcion" id="" cols="40" rows="5"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleFormControlFile1">Subir imagen</label>
+                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Condicion</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                    <option>Nuevo</option>
+                    <option>Usado</option>
+                </select>
+            </div>
+
+            <div class="form-group half-width">
+                <label for="titulo">Precio inicial</label>
+                <input type="number" class="form-control" id="titulo" placeholder="TV Samsung Smart TV" required>
+            </div>
+
+
+            <button type="submit" class="btn btn-primary half-width">Publicar</button>
+        </form>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
