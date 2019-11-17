@@ -14,62 +14,108 @@
     <!-- Font Awesome -->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!--Bootsrap 4 CDN-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <!--Fontawesome CDN-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+	<!--Custom styles-->
+	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
-
     <nav class="navbar navbar-expand-lg navbar-dark">
-        <a id="link" href="#"><img class="logo"
-                src="https://jumpseller.s3.eu-west-1.amazonaws.com/store/alfonso-dumas/assets/subastas.png" alt=""></a>
+        <a id="link" href="inicio.html"><img class="logo"
+            src="https://jumpseller.s3.eu-west-1.amazonaws.com/store/alfonso-dumas/assets/subastas.png" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
         </button>
-
+            
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Nosotros</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contacto</a>
-                </li>
-                &nbsp;
-                <li>
-                    <a class="btn btn-primary menu" href="registro.html" role="button"><i class="fa fa-user"
-                            aria-hidden="true"></i>&nbsp; Registrarse</a>
-                </li>
-            </ul>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Pedidos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Nosotros</a>
+            </li>
+            
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" data-nav-role="signin" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cuenta
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <div id="login-div">
+                        <button type="button" class="btn btn-primary" onclick="location.href='login.html'">Iniciar sesion</button>
+                        <p class="dropdown-header">¿Eres cliente nuevo? <a href="registro.html"> Registrate aquí.</a></p>
+                        <div class="dropdown-divider"></div>
+                    </div>
+            
+                    <div>
+                        <a class="dropdown-item" href="subastando.html">Mis subastas</a>
+                        <a class="dropdown-item" href="subastas_activas.html">Subastas activas</a>
+                        <a class="dropdown-item" href="historial_subastas.html">Historial de subastas</a>
+                        <a class="dropdown-item" href="publicar.html">Publicar</a>
+                    <div class="dropdown-divider"></div>
+                          
+                    <a class="dropdown-item" href="">Ayuda</a>
+                </div>
+            </div>
         </div>
+            
+    </ul>
     </nav>
 
-    <div class="jumbotron">
-        <h1 class="display-3 text-center">Ingresa</h1>
-        <hr class="my-2">
+    <hr class="my-2">
 
-
-        <form>
-            <div class="form-group half-width">
-                <label for="correo">Correo electronico</label>
-                <input type="email" class="form-control" id="correo" placeholder="name@example.com" required>
+    <div class="container">
+        <div class="d-flex justify-content-center h-100">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Inicia sesion</h3>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="username" required>                   
+                        </div>
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-key"></i></span>
+                            </div>
+                            <input type="password" class="form-control" placeholder="password" required>
+                        </div>
+                        <div class="row align-items-center remember">
+                            <input type="checkbox">Recuerdame
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Login" class="btn float-right app_btn">
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer">
+                    <div class="d-flex justify-content-center links">
+                        Aun no tienes una cuenta?<a href="registro.html" id="registrate">Registrate aqui.</a>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <a href="password.html">¿Olvidaste tu contraseña?</a>
+                    </div>
+                </div>
             </div>
-
-            <div class="form-group half-width">
-                <label for="password">Contrasena</label>
-                <input type="password" class="form-control" id="password" placeholder="Juan1991" required>
-            </div>
-
-            <div>
-                <a href="password.html">¿Olvidaste tu contrasena?</a>
-            </div>
-
-            <button type="submit" class="btn btn-primary half-width">Ingresar</button>
-        </form>
     </div>
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -82,6 +128,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
