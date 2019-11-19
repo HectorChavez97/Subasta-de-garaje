@@ -15,10 +15,6 @@ nav.navbar.navbar-expand-lg.navbar-dark {
     margin: 0 auto;
 }
 
-#btnRegister {
-    width: 97%;
-}
-
 .half {
     float: left;
     width: 48%;
@@ -349,4 +345,8 @@ input:focus{
     
 .links a{
     margin-left: 4px;
+}
+
+.row{
+    padding-top: 30px;
 }

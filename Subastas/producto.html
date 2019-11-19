@@ -1,278 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="stylesheet.css">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheet.css">
 
-    <style>
-        .grey{
-            color: gray;
-        }
+    <!-- Font Awesome -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
-        H1{
-            color: grey;
-        }
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
-        .oferta{
-            color: brown;
-        }
+    <!--Bootsrap 4 CDN-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <!--Fontawesome CDN-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
-    </style>
+    <!--Custom styles-->
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-<body>
 
+<body>
     <nav class="navbar navbar-expand-lg navbar-dark">
-        <a id="link" href="index.html"><img class="logo"
-                src="https://jumpseller.s3.eu-west-1.amazonaws.com/store/alfonso-dumas/assets/subastas.png" alt=""></a>
+    <a id="link" href="inicio.html"><img class="logo"
+        src="https://jumpseller.s3.eu-west-1.amazonaws.com/store/alfonso-dumas/assets/subastas.png" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
         </button>
+                        
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pedidos</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Nosotros</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contacto</a>
-                </li>
-                <div class="login-div">
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Mi cuenta
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="subastando.html">Subastando</a>
-                            <a class="dropdown-item" href="subastas_activas.html">Subastas activas</a>
-                            <a class="dropdown-item" href="historial_subastas.html">Historial de subastas</a>
-                            <a class="dropdown-item" href="publicar.html">Publicar</a>
-                            <a class="dropdown-item" href="#">Salir</a>
-                        </div>
+                        
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" data-nav-role="signin" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cuenta
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div id="login-div">
+                            <button type="button" class="btn btn-primary" onclick="location.href='login.html'">Iniciar sesion</button>
+                            <p class="dropdown-header">¿Eres cliente nuevo? <a href="registro.html"> Registrate aquí.</a></p>
+                        <div class="dropdown-divider"></div>
                     </div>
+                        
+                    <div>
+                        <a class="dropdown-item" href="subastando.html">Mis subastas</a>
+                        <a class="dropdown-item" href="subastas_activas.html">Subastas activas</a>
+                        <a class="dropdown-item" href="historial_subastas.html">Historial de subastas</a>
+                        <a class="dropdown-item" href="publicar.html">Publicar</a>
+                    <div class="dropdown-divider"></div>
+                                      
+                    <a class="dropdown-item" href="">Ayuda</a>
                 </div>
+            </div>
         </div>
         </ul>
-        </div>
     </nav>
         
-    <div class="jumbotron">
+    <hr class="my-2">
 
-            <h1 class="text-center"> QUIEN DA MAS?</h1>
-            <hr class="my-2">
+    <div class="container">
+        <table class="table table-bordered">
+            <tr>
+                <td scope="col"><div id="user-data"></div></td>
+                <td scope="col"><div id="title"></div></td>
+                <td rowspan="2"><div id="description"></div></td>
+            </tr>
 
-            <table width="100%">
-                <tr>
-                    <td> </td>
-                    <td><h2 class="text-center"><B>PETITE MELROSE</B></P></td>
-                    <td>
-                        <img src="https://ichef.bbci.co.uk/news/660/cpsprodpb/EBE7/production/_108219306_1-1.jpg" height="50" width="95" alt="">
-                        <img src="https://www.idet.org.mx/wp-content/uploads/2015/09/Subasta-Publica.jpg" height="50" width="95" alt="">
-                        <img src="https://www.masqueabuelos.com/wp-content/uploads/2019/03/Imagen-14.png" height="50" width="95" alt="">
-                        <img src="https://astroselling.com/wp-content/uploads/2019/05/que-es-una-subasta-Mercadolibre.jpg" height="50" width="95" alt="">
-                        <img src="https://www.laopinion.com.co/sites/default/files/styles/640x370/public/2019/01/21/imagen/millones.jpg" height="50" width="95" alt="">
+            <tr>
+                <td scope="col"><div id="start-value"></div></td>
+                <td rowspan="3"><div id="img"></div></td>
+            </tr>
+            <tr>
+                <td scope="row"><div id="current-value"></div></td>
+                <td rowspan="2"><div id="time"></div></td>
+            </tr>
+            <tr>
+                <th scope="row"><div id="ofertar"></div></th>
+            </tr>
+        </table>
+    </div>
 
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img src="data:image/jpeg;base64,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" alt="Error" width="70" width="70"> <br>
-                        <b><i>Hector Antonio</i></b> <br>
-                        <i>Ingeniero en sistemas</i> <br>
-                        <i>Guadalajara, Jal. Mexico</i>
-                        <hr class="my-2">
-                        <i>Estimacion del precio:</i>
-                        <P><b>2,000 - 3,000 MXN</b></P>
-                        <hr class="my-2">
-                        <B>- OFERTA ACTUAL -</B>
-                        <h2 class="oferta">2, 600 MXN</h2>
-                        <hr class="my-2">
-                        <p><i>Hora de hacer tu oferta:</i></p>
-                        <input type="precio" placeholder="$" size="10">
-                        <button type="submit" class="btn btn-success"> Agregar </button>
-                        <hr class="my-2">
-                        <p>La subasta termina en:</p>
-                        <h3>00:02:30:53</h3>
 
-                    </td>
-                    <td><img class="imagen" src="https://www.danielwellington.com/media/staticbucket/media/catalog/product/d/w/dw-petite-28-melrose-white-cat.png?ecom2=true&format=jpg&canvas=1:1&width=600&quality=80&bg-color=ffffff" alt="ERROR" height="500" width="500" ></td>
-                    <td>
-                        <p> <i class="grey">Descripcion</i> <b><i> El Petite Melrose se presentacon una esfera de color <br>
-                            blancotranslúcido y una correa demalla en color oro rosadode <br>
-                            innegable elegancia. Este reloj elevará el tonode tu outfit diario, <br>
-                            asícomo tu estado de ánimo y espíritu</i></b> </p>
-                        <hr class="my-2">
-                        <p> <i class="grey">SKU</i> <b>DW00100219</b> </p>
-                        <hr class="my-2">
-                        <p> <i class="grey">Grosor del estuche</i> <b>6mm</b> </p>
-                        <hr class="my-2">
-                        <p> <i class="grey">Color de la esfera</i> <b>Blanco translucido</b> </p>
-                        <hr class="my-2">
-                        <p> <i class="grey">Movimiento</i> <b>Movimiento de cuarzo japones</b> </p>
-                        <hr class="my-2">
-                        <p> <i class="grey">Anchura de correa</i> <b>12mm</b> </p>
-                        <hr class="my-2">
-                        <p> <i class="grey">Longitud ajustable </i><b>(Min.- Max.) 150-205mm</b> </p>
-                        <hr class="my-2">
-                        <p> <i class="grey">Correa</i> <b>Malla</b> </p>
-                        <hr class="my-2">
-                        <p> <i class="grey">Color de la correa</i> <b>Oro rosado</b> </p>
-                        <hr class="my-2">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
 
-                    </td>
-                </tr>
-            </table>
-            </div>      
-</div>
+    <script src="producto.js"></script>
                 
 </body>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="stylesheet.css">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <style>
-        .grey{
-            color: gray;
-        }
-
-        H1{
-            color: grey;
-        }
-
-        .oferta{
-            color: brown;
-        }
-
-    </style>
-</head>
-<body>
-
-        <nav class="navbar navbar-expand-lg navbar-dark">
-                <a id="link" href="index.html"><img class="logo"
-                        src="https://jumpseller.s3.eu-west-1.amazonaws.com/store/alfonso-dumas/assets/subastas.png" alt=""></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Nosotros</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contacto</a>
-                        </li>
-                        
-                        <div class="login-div">
-                            <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Mi cuenta
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="subastas_activas.html">Subastas activas</a>
-                                    <a class="dropdown-item" href="historial_subastas.html">Historial de subastas</a>
-                                    <a class="dropdown-item" href="subastando.html">Subastando</a>
-                                    <a class="dropdown-item" href="publicar.html">Publicar</a>
-                                    <a class="dropdown-item" href="#">Salir</a>
-                                </div>
-                            </div>
-                        </div>
-                </div>
-                </ul>
-                </div>
-            </nav>
-        
-    <div class="jumbotron">
-
-            <h1 class="text-center"> QUIEN DA MAS?</h1>
-            <hr class="my-2">
-
-            <table width="100%">
-                <tr>
-                    <td> </td>
-                    <td><h2 class="text-center"><B>PETITE MELROSE</B></P></td>
-                    <td>
-                        <img src="https://ichef.bbci.co.uk/news/660/cpsprodpb/EBE7/production/_108219306_1-1.jpg" height="50" width="95" alt="">
-                        <img src="https://www.idet.org.mx/wp-content/uploads/2015/09/Subasta-Publica.jpg" height="50" width="95" alt="">
-                        <img src="https://www.masqueabuelos.com/wp-content/uploads/2019/03/Imagen-14.png" height="50" width="95" alt="">
-                        <img src="https://astroselling.com/wp-content/uploads/2019/05/que-es-una-subasta-Mercadolibre.jpg" height="50" width="95" alt="">
-                        <img src="https://www.laopinion.com.co/sites/default/files/styles/640x370/public/2019/01/21/imagen/millones.jpg" height="50" width="95" alt="">
-
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img src="data:image/jpeg;base64,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" alt="Error" width="70" width="70"> <br>
-                        <b><i>Hector Antonio</i></b> <br>
-                        <i>Ingeniero en sistemas</i> <br>
-                        <i>Guadalajara, Jal. Mexico</i>
-                        <hr class="my-2">
-                        <i>Estimacion del precio:</i>
-                        <P><b>2,000 - 3,000 MXN</b></P>
-                        <hr class="my-2">
-                        <B>- OFERTA ACTUAL -</B>
-                        <h2 class="oferta">2, 600 MXN</h2>
-                        <hr class="my-2">
-                        <p><i>Hora de hacer tu oferta:</i></p>
-                        <input type="precio" placeholder="$" size="10">
-                        <button type="submit" class="btn btn-success"> Agregar </button>
-                        <hr class="my-2">
-                        <p>La subasta termina en:</p>
-                        <h3>00:02:30:53</h3>
-
-                    </td>
-                    <td><img class="imagen" src="https://www.danielwellington.com/media/staticbucket/media/catalog/product/d/w/dw-petite-28-melrose-white-cat.png?ecom2=true&format=jpg&canvas=1:1&width=600&quality=80&bg-color=ffffff" alt="ERROR" height="500" width="500" ></td>
-                    <td>
-                        <p> <i class="grey">Descripcion</i> <b><i> El Petite Melrose se presentacon una esfera de color <br>
-                            blancotranslúcido y una correa demalla en color oro rosadode <br>
-                            innegable elegancia. Este reloj elevará el tonode tu outfit diario, <br>
-                            asícomo tu estado de ánimo y espíritu</i></b> </p>
-                        <hr class="my-2">
-                        <p> <i class="grey">SKU</i> <b>DW00100219</b> </p>
-                        <hr class="my-2">
-                        <p> <i class="grey">Grosor del estuche</i> <b>6mm</b> </p>
-                        <hr class="my-2">
-                        <p> <i class="grey">Color de la esfera</i> <b>Blanco translucido</b> </p>
-                        <hr class="my-2">
-                        <p> <i class="grey">Movimiento</i> <b>Movimiento de cuarzo japones</b> </p>
-                        <hr class="my-2">
-                        <p> <i class="grey">Anchura de correa</i> <b>12mm</b> </p>
-                        <hr class="my-2">
-                        <p> <i class="grey">Longitud ajustable </i><b>(Min.- Max.) 150-205mm</b> </p>
-                        <hr class="my-2">
-                        <p> <i class="grey">Correa</i> <b>Malla</b> </p>
-                        <hr class="my-2">
-                        <p> <i class="grey">Color de la correa</i> <b>Oro rosado</b> </p>
-                        <hr class="my-2">
-
-                    </td>
-                </tr>
-            </table>
-            </div>      
-</div>
-                
-</body>
 </html>
