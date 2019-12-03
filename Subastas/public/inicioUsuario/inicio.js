@@ -1,7 +1,5 @@
 let container = document.querySelector(".container")            //container que tiene el esqueleto de productos
 
-loadProducts()
-
 function loadProducts(){
     let req = new XMLHttpRequest()
     req.open("GET","http://localhost:3000/productos", true)
@@ -25,7 +23,7 @@ function showProducts(products){
 }
 
 function addData(col, product){
-    let colElements = col.querySelectorAll('div:empty')
+    let colElements = col.querySelectorAll('div')
     let title = getTitle(colElements)
     setTitle(title, product)
 
@@ -84,7 +82,7 @@ function setPrice(price, product){
 function getClock(col){ return col[3] }
 function setClock(clock, product){
     let clockP = document.createElement("p");                   //crear la etiqueta <h4>
-    let node = document.createTextNode("");                   //crear el contenido que va dentro de h1
+    let node = document.createTextNode("");                     //crear el contenido que va dentro de h1
     clockP.appendChild(node)
     clock.appendChild(clockP)
 
@@ -101,6 +99,7 @@ function jjj(node, product){
     let hour = ddd(productTime - currentTime)
     node.textContent = hour
 
+    setTimeout(loadProducts,  1000);
     //setInterval(jjj(node, product), 1000)
 }
 
@@ -123,6 +122,8 @@ function ddd(hour){
 function productListener(){ 
     window.open("producto.html")
 }
+
+loadProducts()
 
 
 /*
