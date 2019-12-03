@@ -1,6 +1,27 @@
 let registerB = document.getElementById("register-button")
 let container = document.querySelector(".container")
-registerB.addEventListener("click", registerBListener)
+//registerB.addEventListener("click", registerBListener)
+let form = document.getElementById('form');
+let botonRegistro = document.getElementById('register-button');
+let firstPassword = document.getElementById('firstPassword').value;
+let newPassword = document.getElementById('newPassword').value;
+let invalidInput = form.querySelectorAll('input:invalid');
+
+
+
+form.addEventListener('change',(e) => validandoDatos(e));
+
+function validandoDatos(e) {
+    if (invalidInput.length == 6) {
+        botonRegistro.disabled = true;
+    } else {
+        if (firstPassword === newPassword) {
+            botonRegistro.disabled = false;
+        } else {
+            botonRegistro.disabled = true;
+        }
+    }
+}
 
 function registerBListener(event){
     if(validateCompleteData()){
