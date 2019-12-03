@@ -1,10 +1,8 @@
 let mongoose = require('mongoose');
 let config = require('./config.json');
 
-//ASEGURATE DE TENER EL ARCHIVO config.json
+let mongodb = `mongodb+srv://${config.dbuser}:${config.dbpsw}@cluster0-wylbz.mongodb.net/test?retryWrites=true&w=majority`;
 
-let mongodb = `mongodb+srv://${config.dbuser}:${config.dbpsw}@cluster0-btqj9.mongodb.net/${config.dbname}?retryWrites=true&w=majority`;
-//mongodb+srv://admin:<password>@webproject-0b5dj.mongodb.net/test?retryWrites=true&w=majority
 mongoose.connect(mongodb, {
     useNewUrlParser: true,
     useCreateIndex: true,
@@ -16,4 +14,3 @@ mongoose.connect(mongodb, {
 });
 
 module.exports = {mongoose}
-
