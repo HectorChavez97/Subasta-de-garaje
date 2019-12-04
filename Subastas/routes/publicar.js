@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Product = require('../models/Product')
 
-//creando nuevo producto de subasta
+//INSERTAR http://localhost:3000/api/publicar/
 router.post('/', async(req, res) => {
     try{
         let {
@@ -43,20 +43,43 @@ router.post('/', async(req, res) => {
     }
 })
 
+//OBTENER POR TITULO
 router.get('/', (req, res) => {
-    console.log('todo bien')
-    res.status(200)
-})
-/*
-router.get('/products', (req, res)=> {
-    if(req.query.titulo) {
-    res.send(`Haciendo get por parametro a ${req.query.titulo}`)}
-    
+    if(!req.query.titulo) {
+        return res.status(400).send('Falta un parametro: titulo de subasta');
+    }
+
+    Product.find({ //find() -> varios mismo nombre
+        titulo: req.query.titulo
+    }).then(doc =>{res.json(doc)})
+    .catch(err => {
+        res.status(500).json(err);
+    })
 })
 
-router.get('/products/:titulo', (req, res) => {
-    res.send(`Haciendo get a ${req.params.titulo}`);
-    Product.findOne({titulo: req.query.titulo});
-})*/
+//ACTUALIZAR PRODUCTO
+router.put('/', (req, res) => {
+    if(!req.query.titulo) {
+        return res.status(400).send('Falta titulo de la subasta para modificar');
+    }
+
+    Product.findOneAndUpdate({
+        titulo: req.query.titulo
+    }, req.body, {new:true}).then(doc => {
+        res.json(doc)
+    }).catch(err=>{res.status(500).json(err)})
+})
+
+//BORRAR PRODUCTO SUBASTA
+router.delete('/', (req, res) => {
+    if(!req.query.titulo) {
+        return res.status(400).send('Falta titulo de la subasta para borrar');
+    }
+    Product.findOneAndRemove({
+        titulo: req.query.titulo
+    }).then(doc => {
+        res.json(doc)
+    }).catch(err=>{res.status(500).json(err)})
+})
 
 module.exports = router;
