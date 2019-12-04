@@ -1,3 +1,4 @@
+const cors      = require('cors')
 const bParser   = require('body-parser')
 const cParser   = require('cookie-parser'); 
 const express   = require('express');
@@ -15,6 +16,7 @@ const historialSRouter  = require('./routes/historialSubasta')
 const sActivasRouter    = require('./routes/subastasActivas')
 const miSubastaRouter   = require('./routes/miSubasta')
 
+app.use(cors())
 app.use(bParser.json())
 app.use(cParser())
 app.use('/api/inicio', inicioRouter);

@@ -1,6 +1,6 @@
 let registerB = document.getElementById("register-button")
 let container = document.querySelector(".container")
-//registerB.addEventListener("click", registerBListener)
+registerB.addEventListener("click", registerBListener)
 let form = document.getElementById('form');
 let botonRegistro = document.getElementById('register-button');
 let firstPassword = document.getElementById('firstPassword').value;
@@ -8,7 +8,7 @@ let newPassword = document.getElementById('newPassword').value;
 let invalidInput = form.querySelectorAll('input:invalid');
 
 
-form.addEventListener('change',(e) => validandoDatos(e));
+//form.addEventListener('click',(e) => registerBListener(e));
 
 function validandoDatos(e) {
     if (invalidInput.length == 6) {
@@ -23,9 +23,7 @@ function validandoDatos(e) {
 }
 
 function registerBListener(event){
-    if(validateCompleteData()){
-        validateEmail()
-    }
+    registerUser()
 
     event.preventDefault()
 }
@@ -41,27 +39,10 @@ function validateCompleteData(){
     return complete
 }
 
-function validateEmail(){
-    let correo = getEmail()
-    let req = new XMLHttpRequest()
-    req.open("GET","http://localhost:3000/usuarios?correo=" + correo, true)
-    req.send(null)
-
-    req.onload = () => {        
-        if(req.status == 200){
-            let res = JSON.parse(req.response)  
-
-            if(res.length == 0) registerUser()
-            else alert("Email already in use")
-        }   
-        else alert(req.status + ': ' + req.statusText)
-    };
-}
-
 function registerUser(){
     let req = new XMLHttpRequest()
 
-    req.open('POST', "http://localhost:3000/usuarios", true)
+    req.open('POST', "http://localhost:3000/api/registro", true)
     req.setRequestHeader('Content-Type','application/json')
     req.send(JSON.stringify(new getForm()))
 

@@ -8,6 +8,7 @@ router.post('/', async(req, res) => {
         let {
             titulo,
             descripcion,
+            categoria,
             image,
             estado,
             finFechaDia,
@@ -16,12 +17,13 @@ router.post('/', async(req, res) => {
             precioInicial
         } = req.body;
 
-        if(titulo != undefined && descripcion != undefined && image != undefined && estado != undefined &&
-            finFechaDia != undefined && finFechaHora && precioInicial != undefined && autor != undefined) {
+        if(titulo != undefined && descripcion != undefined && image != undefined && estado != undefined && categoria != undefined &&
+             finFechaDia != undefined && finFechaHora && precioInicial != undefined && autor != undefined) {
                     
                     let product = new Product({
                     titulo: req.body.titulo, 
                     descripcion: req.body.descripcion,
+                    categoria: req.body.categoria,
                     image: req.body.image,
                     estado: req.body.estado,
                     finFechaDia: req.body.finFechaDia,

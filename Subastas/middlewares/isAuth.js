@@ -3,11 +3,12 @@ const jwt = require('jsonwebtoken')
 function isAuth(req, res, next) {
     const authorization = req.headers['authorization']
 
-    if(!authorization) throw new Error("No tienes un token")
+    if(!authorization) throw new Error("No tienes undwedwededwe token")
 
     jwt.verify(authorization, "paloma", function (err, decoded) {
         if (decoded) {
-            res.send({ error: "autorizado"}) 
+            console.log("hoalaaaaaaa")
+            res.send({ decoded: "autorizado"}) 
             next()
             return
         }
