@@ -5,6 +5,7 @@ let rowOne = document.getElementById('rowOne');
 //let rowTwo = document.getElementById('rowTwo');
 //let rowThree = document.getElementById('rowThree');
 
+/*
 const product = [{
         id: '1',
         title: 'Titulo de Producto 1',
@@ -59,7 +60,9 @@ const product = [{
         image: 'https://images-na.ssl-images-amazon.com/images/I/71u%2BNIKt-lL._SL1000_.jpg',
         time: '00:00:00'
     }
-];
+];*/
+
+
 
 let rowOneChilds = rowOne.childElementCount;
 //let lastProduct = [product.length - 1];

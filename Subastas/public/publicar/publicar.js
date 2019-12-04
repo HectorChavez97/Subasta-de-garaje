@@ -1,6 +1,10 @@
 let publicarB = document.getElementById("publicar-button")
 let container = document.querySelector(".container")
-publicarB.addEventListener("click", publicarBListener)
+//publicarB.addEventListener("click", publicarBListener)
+let form = document.getElementById('form');
+
+form.addEventListener('change',(e) => publicarBListener(event));
+
 
 function publicarBListener(event){
     console.log(validateCompleteData())
@@ -11,7 +15,7 @@ function publicarBListener(event){
     event.preventDefault()
 }
 
-function validateCompleteData(){
+function validateCompleteData(e){
     let inputs = container.getElementsByTagName("input")
     let complete = true 
 
@@ -34,7 +38,7 @@ function publishProduct(){
 
     req.onload = () => {
         if(req.status == 200) {
-            alert("Register successful")
+            alert("Publish successful")
             window.open("login.html","_self")
         }
         else  alert(req.status + ': ' + req.statusText)

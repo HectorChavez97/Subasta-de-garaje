@@ -6,15 +6,31 @@ let productSchema = mongoose.Schema({
         type:String,
         required:true
     },
-    imagen: {
+    descripcion: {
         type: String,
         required: true
     },
-    tiempo:{
+    image:{
         type:String,
         required: true
     },
-    boton:{
+    estado:{
+        type:String,
+        required: true
+    },
+    finFechaDia:{
+        type:String,
+        required: true
+    },
+    finFechaHora:{
+        type:String,
+        required: true
+    },
+    autor:{
+        type:String,
+        required: true
+    },
+    precioInicial:{
         type:String,
         required: true
     }
