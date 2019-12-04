@@ -76,16 +76,16 @@
                         <h3>Publica tu producto</h3>
                     </div>
                     <div class="card-body">
-                        <form>
+                        <form id="form">
                             <div class="form-row">
                                 <div class="form-group">
-                                    <label>Producto </label>  
-                                    <input type="text" class="form-control" placeholder="TV Samsung Smart TV" required>
+                                    <label for="titulo">Producto </label>  
+                                    <input type="text" class="form-control" placeholder="TV Samsung Smart TV" name="titulo" required>
                                 </div> 
                             </div> 
                             <div class="form-row">
                                 <label>Descripcion</label>
-                                <textarea class="form-control" id="description" name="descripcion" cols="40" rows="5" required></textarea>
+                                <textarea class="form-control" id="description" name="descripcion" cols="40" rows="5" placeholder="Excelentes condiciones, nuevo." required></textarea>
                             </div>
                             <div class="form-group">
                                 <label class="form-check form-check-inline">
@@ -107,18 +107,18 @@
 
                             <div class="form-row">
                                 <label>Valor inicial de la subasta</label>
-                                <input class="form-control" type="number" required>
+                                <input class="form-control" type="number" placeholder="2000" required>
                             </div> 
 
                             <div class="form-row">
                                 <label>Imagen del producto</label>
-                                <input type="file" class="form-control-file">
+                                <input type="text" class="form-control" placeholder="URL del producto" required>
                             </div>
                         </form>    
                         
                         <div class="card-footer">
                             <div class="d-flex justify-content-center">
-                                <button value="Publicar" class="btn float-right app_btn" id="publicar-button">Publicar</button>
+                                <button type="submit" class="btn float-right app_btn" id="publicar-button">Publicar</button>
                             </div>
                         </div>
                         </div>

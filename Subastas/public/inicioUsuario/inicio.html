@@ -23,136 +23,54 @@
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark">
-    <a id="link" href="inicio.html"><img class="logo"
+    <a id="link" href="#"><img class="logo"
         src="https://jumpseller.s3.eu-west-1.amazonaws.com/store/alfonso-dumas/assets/subastas.png" alt=""></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-            
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Pedidos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Nosotros</a>
-            </li>
-            
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" data-nav-role="signin" type="button" id="dropdownMenuButton"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cuenta
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <div id="login-div">
-                        <button type="button" class="btn btn-primary" onclick="location.href='login.html'">Iniciar sesion</button>
-                        <p class="dropdown-header">¿Eres cliente nuevo? <a href="registro.html"> Registrate aquí.</a></p>
-                        <div class="dropdown-divider"></div>
-                    </div>
-            
-                    <div>
-                        <a class="dropdown-item" href="subastando.html">Mis subastas</a>
-                        <a class="dropdown-item" href="subastas_activas.html">Subastas activas</a>
-                        <a class="dropdown-item" href="historial_subastas.html">Historial de subastas</a>
-                        <a class="dropdown-item" href="publicar.html">Publicar</a>
-                    <div class="dropdown-divider"></div>
-                          
-                    <a class="dropdown-item" href="">Ayuda</a>
-                </div>
-            </div>
-        </div>
-        </ul>
-    </nav>
-  
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contacto</a>
+        </li>
+        <li>
+          <a name="" id="" class="btn btn-primary menu" href="registro.html" role="button"><i class="fa fa-user"
+              aria-hidden="true"></i>&nbsp; Registrarse</a>
+        </li>
+        &nbsp;
+        <li>
+          <a name="" id="" class="btn btn-primary menu" href="login.html" role="button"><i class="fa fa-sign-in"
+              aria-hidden="true"></i>&nbsp; Ingresar</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="jumbotron">
     <h1 class="display-3 text-center">No dejes pasar estos productos!!</h1>
     <hr class="my-2">
 
     <div class="container">
-      <div class="row">
-        <div class="col-4" id="colOne">
-          <div class="title"></div>
-          <div class="image"></div>
-          <div class="price"></div>
-          <div class="clock"></div>
-        </div>
-    
-        <div class="col-4" id="colTwo">
-          <div class="title"><h4> </h4></div>
-          <div class="image"><img src=""> </img> </div>
-          <div class="price"><p> </p></div>
-          <div class="clock"><p> </p></div>
-        </div>
-    
-        <div class="col-4" id="colThree">
-          <div class="title"></div>
-          <div class="image"></div>
-          <div class="price"></div>
-          <div class="clock"></div>
-        </div>
+      <div class="row" id="rowOne">
+        <!-- getting bodyProduct (inicio.js) ROW 1 -->
       </div>
-    
-      <div class="row">
-        <div class="col-4" id="colFour">
-          <div class="title"></div>
-          <div class="image"></div>
-          <div class="price"></div>
-          <div class="clock"></div>
-        </div>
-    
-      <div class="col-4" id="colFive">
-        <div class="title"></div>
-        <div class="image"></div>
-        <div class="price"></div>
-        <div class="clock"></div>
+      <div class="row" id="rowTwo">
+        <!-- getting bodyProduct (inicio.js) ROW 2 -->
       </div>
-    
-      <div class="col-4" id="colSix">
-        <div class="title"></div>
-        <div class="image"></div>
-        <div class="price"></div>
-        <div class="clock"></div>
-      </div>
-    </div>
-    
-    <div class="row">
-      <div class="col-4" id="colSeven">
-        <div class="title"></div>
-        <div class="image"></div>
-        <div class="price"></div>
-        <div class="clock"></div>
-      </div>
-    
-      <div class="col-4" id="colEight">
-        <div class="title"></div>
-        <div class="image"></div>
-        <div class="price"></div>
-        <div class="clock"></div>
-      </div>
-    
-      <div class="col-4" id="colNine">
-        <div class="title"></div>
-        <div class="image"></div>
-        <div class="price"></div>
-        <div class="clock"></div>
+      <div class="row" id="rowThree">
+        <!-- getting bodyProduct (inicio.js) ROW 3 -->
       </div>
     </div>
   </div>
-</div>
-
-  <ul class="pagination justify-content-center">
-    <li class="page-item disabled">
-      <a class="page-link" href="#" tabindex="-1">Previous</a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#">Next</a>
-    </li>
-  </ul> 
+ 
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->

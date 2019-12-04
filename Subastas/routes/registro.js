@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/User')
 
+//INSERTAR http://localhost:3000/api/registro/
 router.post('/', async (req, res) => {
     try{
         let {
@@ -43,8 +44,44 @@ router.post('/', async (req, res) => {
     }
 })
 
+//OBTENER
 router.get("/", (req, res) => {
-    res.status(200)
+    //res.status(200)
+    if(!req.query.correo) {
+        return res.status(400).send('Falta un parametro: email');
+    }
+
+    User.findOne({
+        correo: req.query.correo
+    }).then(doc => 
+        {res.json(doc)})
+        .catch(err => {
+            res.status(500).json(err);
+        })
+}) 
+
+//ACTUALIZAR
+router.put('/', (req, res) => {
+    if(!req.query.correo) {
+        return res.status(400).send('Falta email');
+    }
+    User.findOneAndUpdate({
+        correo: req.query.correo
+    }, req.body, {new:true}).then(doc => {
+        res.json(doc)
+    }).catch(err=>{res.status(500).json(err)})
+})
+
+//BORRAR REGISTRO (por URL ej. http://localhost:3000/api/registro/?correo=TESTalexisoficial@mail.com)
+router.delete('/', (req, res) => {
+    if(!req.query.correo) {
+        return res.status(400).send('Falta email');
+    }
+    User.findOneAndRemove({
+        correo: req.query.correo
+    }).then(doc => {
+        res.json(doc)
+    }).catch(err=>{res.status(500).json(err)})
 })
 
 module.exports = router;
