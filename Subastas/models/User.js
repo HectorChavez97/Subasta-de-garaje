@@ -25,6 +25,9 @@ let userSchema = mongoose.Schema({
     contrasena:{
         type:String,
         required: true
+    }, 
+    refreshToken:{
+        type:String
     }
 });
 

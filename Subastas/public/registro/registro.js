@@ -8,7 +8,6 @@ let newPassword = document.getElementById('newPassword').value;
 let invalidInput = form.querySelectorAll('input:invalid');
 
 
-
 form.addEventListener('change',(e) => validandoDatos(e));
 
 function validandoDatos(e) {
