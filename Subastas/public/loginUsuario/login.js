@@ -27,8 +27,9 @@ function validateUser(){
     let pass = getPassword()
 
     let req = new XMLHttpRequest()
-    req.open("GET","http://localhost:3000/api/login" + correo, true)
-    req.send(null)
+    req.open("GET", "http://localhost:3000/api/login" + correo, true)
+    req.setRequestHeader('Content-Type','application/json')
+    req.send(JSON.stringify(new getForm()))
 
     req.onload = () => {      
         if(req.status == 200){
@@ -42,6 +43,11 @@ function validateUser(){
         }   
         else alert(req.status + ': ' + req.statusText)
     };
+}
+
+function getForm(){
+    this.correo     = getEmail,
+    this.contrasena = getPassword
 }
 
 function getEmail(){

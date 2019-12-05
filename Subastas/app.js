@@ -19,13 +19,18 @@ const miSubastaRouter   = require('./routes/miSubasta')
 app.use(cors())
 app.use(bParser.json())
 app.use(cParser())
-app.use('/api/inicio', inicioRouter);
-app.use('/api/login', loginRouter);
-app.use('/api/logout', logoutRouter);
+
+app.use(                express.static(__dirname+"/public/inicioUsuario"))
+app.use('/login'       ,express.static(__dirname+"/public/loginUsuario"))
+app.use('/registro'    ,express.static(__dirname+"/public/registro"))
+
+app.use('/api/inicio',  inicioRouter);
+app.use('/api/login',   loginRouter);
+app.use('/api/logout',  logoutRouter);
 app.use('/api/registro', registroRouter);
 app.use('/api/publicar', publicarRouter);
 app.use('/api/contrasena', contrasenaRouter);
-app.use('/api/editar', editarSRouter);
+app.use('/api/editar',  editarSRouter);
 app.use('/api/historial', historialSRouter);
 app.use('/api/subastasActivas', sActivasRouter);
 app.use('/api/miSubastas', miSubastaRouter);

@@ -1,8 +1,7 @@
-const express = require('express');
-const router = express.Router();
-const User = require('../models/User')
+const User      = require('../models/User')
+const express   = require('express');
+const router    = express.Router();
 
-//INSERTAR http://localhost:3000/api/registro/
 router.post('/', async (req, res) => {
     try{
         let {
@@ -44,6 +43,7 @@ router.post('/', async (req, res) => {
     }
 })
 
+/*
 //OBTENER
 router.get("/", (req, res) => {
     //res.status(200)
@@ -82,6 +82,6 @@ router.delete('/', (req, res) => {
     }).then(doc => {
         res.json(doc)
     }).catch(err=>{res.status(500).json(err)})
-})
+}) */
 
 module.exports = router;

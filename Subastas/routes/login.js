@@ -13,8 +13,10 @@ router.get('/', async (req, res) => {
         if(correo != undefined && contrasena != undefined){
             let user = await User.findOne({correo: req.body.correo}).findOne({contrasena: req.body.contrasena})
 
-            if(!user) return res.status(404).send('Datos incorrectos!');
-            
+            if(!user){
+                return res.status(404).send('Datos incorrectos!');
+            } 
+
             let token = jwt.sign({user}, 'secretKey', {expiresIn: '5m'});
 
             res.cookie('refreshtoken' , token, { httpOnly: true}).send({
@@ -25,7 +27,6 @@ router.get('/', async (req, res) => {
         else return res.status(404).send("Usuario y contrasena necesarios")
     }
     catch(err){
-        console.log(err)
         res.status(400).send({
             error: "ocurrió un error",
             detalle: err

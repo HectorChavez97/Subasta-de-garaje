@@ -1,14 +1,13 @@
 let registerB = document.getElementById("register-button")
 let container = document.querySelector(".container")
-registerB.addEventListener("click", registerBListener)
 let form = document.getElementById('form');
 let botonRegistro = document.getElementById('register-button');
 let firstPassword = document.getElementById('firstPassword').value;
 let newPassword = document.getElementById('newPassword').value;
 let invalidInput = form.querySelectorAll('input:invalid');
 
-
 //form.addEventListener('click',(e) => registerBListener(e));
+registerB.addEventListener("click", registerBListener)
 
 function validandoDatos(e) {
     if (invalidInput.length == 6) {
@@ -62,7 +61,6 @@ function getForm(){
     this.ciudad = getCity()
     this.estado = getState()
     this.contrasena = getPassword()
-    this.usuario = "usuario"
 }
 
 function getName(){
