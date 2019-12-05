@@ -4,6 +4,8 @@ const cParser   = require('cookie-parser');
 const express   = require('express');
 const app       = express();
 const port      = process.env.PORT || 3000; 
+const path = require("path");
+
 
 const inicioRouter      = require('./routes/inicio')
 const loginRouter       = require('./routes/login')
@@ -15,6 +17,13 @@ const editarSRouter     = require('./routes/editarSubasta')
 const historialSRouter  = require('./routes/historialSubasta')
 const sActivasRouter    = require('./routes/subastasActivas')
 const miSubastaRouter   = require('./routes/miSubasta')
+
+app.use(express.static(__dirname+'/public')); 
+
+let a = app.get('/inicio', function(req, res){
+    console.log("Pagina de inicio");
+        res.sendFile(__dirname + '/public/inicioUsuario/inicio.html');
+    });
 
 app.use(cors())
 app.use(bParser.json())
