@@ -20,8 +20,8 @@ const miSubastaRouter   = require('./routes/miSubasta')
 
 app.use(express.static(__dirname+'/public')); 
 
-app.get('/inicio', function(req, res){
-    if(tgtgtgt)
+let a = app.get('/inicio', function(req, res){
+    console.log("Pagina de inicio");
         res.sendFile(__dirname + '/public/inicioUsuario/inicio.html');
     });
 
