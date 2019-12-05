@@ -4,50 +4,29 @@ let container = document.querySelector(".container")
 loginButton.addEventListener("click", loginBListener)
 
 function loginBListener(event){
-    if(validateCompleteData()){
-        validateUser()
-    }
+    logInUser()
 
     event.preventDefault()
 }
 
-function validateCompleteData(){
-    let inputs = container.getElementsByTagName("input")
-    let complete = true 
-
-    for(i = 0; i < inputs.length; i++){
-        if(inputs[i].type != "checkbox" && inputs[i].value == "") complete = false
-    }
-
-    return complete
-}
-
-function validateUser(){
-    let correo = getEmail()
-    let pass = getPassword()
-
+function logInUser(){
     let req = new XMLHttpRequest()
-    req.open("GET", "http://localhost:3000/api/login" + correo, true)
+
+    req.open("POST", "http://localhost:3000/api/login", true)
     req.setRequestHeader('Content-Type','application/json')
     req.send(JSON.stringify(new getForm()))
 
     req.onload = () => {      
         if(req.status == 200){
-            let res = JSON.parse(req.response)  
- 
-            if(res.length == 0) alert("Data incorrect, please check")
-            else {
-                if(res[0].contrasena == pass) window.location.href = "inicio.html"
-                else alert("Password incorrect, please check")
-            }
+            window.location.href = "/"
         }   
-        else alert(req.status + ': ' + req.statusText)
+        else alert(req.status + ': ' + req.response)
     };
 }
 
 function getForm(){
-    this.correo     = getEmail,
-    this.contrasena = getPassword
+    this.correo     = getEmail()
+    this.contrasena = getPassword()
 }
 
 function getEmail(){

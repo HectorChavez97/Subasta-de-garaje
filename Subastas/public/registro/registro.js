@@ -57,7 +57,7 @@ function registerUser(){
 function getForm(){
     this.nombre = getName()
     this.correo = getEmail()
-    this.sexo = getSex()
+    this.sexo   = getSex()
     this.ciudad = getCity()
     this.estado = getState()
     this.contrasena = getPassword()

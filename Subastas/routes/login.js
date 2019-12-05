@@ -3,7 +3,7 @@ const express   = require('express');
 const User      = require('../models/User')
 const router    = express.Router();
 
-router.get('/', async (req, res) => {
+router.post('/', async (req, res) => {
     try{
         let {
             correo, 
@@ -14,12 +14,12 @@ router.get('/', async (req, res) => {
             let user = await User.findOne({correo: req.body.correo}).findOne({contrasena: req.body.contrasena})
 
             if(!user){
-                return res.status(404).send('Datos incorrectos!');
+                return res.status(404).send('Datos incorrectos');
             } 
 
             let token = jwt.sign({user}, 'secretKey', {expiresIn: '5m'});
 
-            res.cookie('refreshtoken' , token, { httpOnly: true}).send({
+            res.status(200).cookie('refreshtoken' , token, { httpOnly: true}).send({
                 token
             })
         }
