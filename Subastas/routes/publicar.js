@@ -60,7 +60,7 @@ router.get('/', (req, res) => {
 })
 
 //ACTUALIZAR PRODUCTO
-router.put('/', (req, res) => {
+router.patch('/', (req, res) => {
     if(!req.query.titulo) {
         return res.status(400).send('Falta titulo de la subasta para modificar');
     }
