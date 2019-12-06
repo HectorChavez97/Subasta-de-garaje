@@ -5,7 +5,7 @@ loadProducts()
 function loadProducts(){
     let req = new XMLHttpRequest()
     req.open("GET","http://localhost:3000/api/inicio", true)
-    req.send(null)
+    req.send();
     
     req.onload = () => {      
         if(req.status == 200){

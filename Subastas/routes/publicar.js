@@ -44,7 +44,7 @@ router.post('/', async(req, res) => {
         });
     }
 })
-
+/*
 //OBTENER POR TITULO
 router.get('/', (req, res) => {
     if(!req.query.titulo) {
@@ -82,6 +82,6 @@ router.delete('/', (req, res) => {
     }).then(doc => {
         res.json(doc)
     }).catch(err=>{res.status(500).json(err)})
-})
+})*/
 
 module.exports = router;
