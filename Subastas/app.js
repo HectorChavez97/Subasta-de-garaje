@@ -25,7 +25,7 @@ app.use(                 express.static(__dirname+"/public/inicioUsuario"))
 app.use('/login'        ,express.static(__dirname+"/public/loginUsuario"))
 app.use('/registro'     ,express.static(__dirname+"/public/registro"))
 app.use('/publicar'     ,express.static(__dirname + "/public/publicar"))
-app.use('/producto'     ,express.static(__dirname + '/public/producto'));
+app.use('/producto/:id' ,express.static(__dirname + "/public/producto"));
 
 app.use('/api/inicio',  inicioRouter);
 app.use('/api/login',   loginRouter);

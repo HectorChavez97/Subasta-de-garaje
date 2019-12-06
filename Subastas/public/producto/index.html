@@ -2,70 +2,79 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <!-- Font Awesome -->
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <!-- Font Awesome -->
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
-    <!--Fontawesome CDN-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <!--Fontawesome CDN-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
-    <!--Custom styles-->
-    <link rel="stylesheet" type="text/css" href="../stylesheet.css">
+  <!--Custom styles-->
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark">
-    <a id="link" href="inicio.html"><img class="logo"
-        src="https://jumpseller.s3.eu-west-1.amazonaws.com/store/alfonso-dumas/assets/subastas.png" alt=""></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-                        
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Pedidos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Nosotros</a>
-                </li>
-                        
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" data-nav-role="signin" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cuenta
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <div id="login-div">
-                            <button type="button" class="btn btn-primary" onclick="location.href='login.html'">Iniciar sesion</button>
-                            <p class="dropdown-header">¿Eres cliente nuevo? <a href="/registro"> Registrate aquí.</a></p>
-                        <div class="dropdown-divider"></div>
-                    </div>
-                        
-                    <div>
-                        <a class="dropdown-item" href="subastando.html">Mis subastas</a>
-                        <a class="dropdown-item" href="subastas_activas.html">Subastas activas</a>
-                        <a class="dropdown-item" href="historial_subastas.html">Historial de subastas</a>
-                        <a class="dropdown-item" href="publicar.html">Publicar</a>
-                    <div class="dropdown-divider"></div>
-                                      
-                    <a class="dropdown-item" href="">Ayuda</a>
+        <nav class="mb-1 navbar navbar-expand-lg navbar-dark default-color">
+                <a id="link" href="/"><img class="logo"
+                    src="https://jumpseller.s3.eu-west-1.amazonaws.com/store/alfonso-dumas/assets/subastas.png" alt=""></a>
+            
+                <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+                  <ul class="navbar-nav mr-auto">
+            
+                    <li class="nav-item active">
+                      <a class="nav-link" href="/">Inicio <span class="sr-only">(current)</span></a>
+                    </li>
+            
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Nosotros</a>
+                    </li>
+            
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Categorias
+                      </a>
+            
+                      <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
+                        <a class="dropdown-item" href="#">Electronica</a>
+                        <a class="dropdown-item" href="#">Hogar</a>
+                        <a class="dropdown-item" href="#">Ropa</a>
+                      </div>
+                    </li>
+                  </ul>
+            
+                  <ul class="navbar-nav ml-auto nav-flex-icons">
+                    <li class="nav-item">
+                      <a class="nav-link" href="/login">Iniciar sesion</a>
+                    </li>
+            
+                    <li class="nav-item">
+                      <a class="nav-link" href="/registro">Registro</a>
+                    </li>
+            
+                    <li class="nav-item dropdown hidden" id="menuUsuario">
+                      <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false"> <i class="fas fa-user"></i>
+                      </a>
+            
+                      <div class="dropdown-menu dropdown-menu-right dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
+                        <a class="dropdown-item" href="/login">Mis subastas</a>
+                        <a class="dropdown-item" href="/registro">Subastas activas</a>
+                        <a class="dropdown-item" href="/login">Historial de subastas</a>
+                        <a class="dropdown-item" href="/registro">Publicar</a>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
-            </div>
-        </div>
-        </ul>
-    </nav>
+              </nav>
         
     <hr class="my-2">
 

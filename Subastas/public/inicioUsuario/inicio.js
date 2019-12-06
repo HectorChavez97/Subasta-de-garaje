@@ -1,7 +1,7 @@
 let container = document.querySelector(".container")            //container que tiene el esqueleto de productos
-let number = product.titulo + product.precioInicial;
 
 loadProducts()
+
 function loadProducts(){
     let req = new XMLHttpRequest()
     req.open("GET","http://localhost:3000/api/inicio", true)
@@ -103,7 +103,7 @@ function getLink(col) {return col[4]}
 function setLink(link, product) {
     let a = document.createElement('a');
     let node = document.createTextNode('Subastar');
-    a.setAttribute('href', window.location.pathname + 'product/' + product._id);
+    a.setAttribute('href', window.location.pathname + 'producto/' + product._id);
     a.appendChild(node);
     link.appendChild(a);
 }
@@ -142,4 +142,14 @@ function productListener(){
 }
 
 
-setInterval(loadProducts, 1000)
+/*
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    var arrayProductos = JSON.parse(this.responseText);
+    document.getElementById("demo").innerHTML = myObj.name;
+  }
+};
+xmlhttp.open("GET", "http://localhost:3000/productos", true);
+xmlhttp.send();
+*/
