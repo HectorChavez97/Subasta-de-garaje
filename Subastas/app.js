@@ -17,6 +17,7 @@ const sActivasRouter    = require('./routes/subastasActivas')
 const miSubastaRouter   = require('./routes/miSubasta')
 const producto          = require('./routes/producto');
 
+
 app.use(cors())
 app.use(bParser.json())
 app.use(cParser())
@@ -25,7 +26,7 @@ app.use(                 express.static(__dirname+"/public/inicioUsuario"))
 app.use('/login'        ,express.static(__dirname+"/public/loginUsuario"))
 app.use('/registro'     ,express.static(__dirname+"/public/registro"))
 app.use('/publicar'     ,express.static(__dirname + "/public/publicar"))
-app.use('/producto'     ,express.static(__dirname + '/public/producto'));
+app.use('/productos/:id',express.static(__dirname + '/public/producto'));
 
 app.use('/api/inicio',  inicioRouter);
 app.use('/api/login',   loginRouter);
@@ -37,6 +38,6 @@ app.use('/api/editar',  editarSRouter);
 app.use('/api/historial', historialSRouter);
 app.use('/api/subastasActivas', sActivasRouter);
 app.use('/api/miSubastas', miSubastaRouter);
-app.use('/api/producto', producto);
+app.use('/api/productos', producto);
 
 app.listen(port, () => console.log(`http://localhost:${port}`));

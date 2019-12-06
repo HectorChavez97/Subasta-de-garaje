@@ -75,6 +75,7 @@ function getImage(col){ return col[1] }
 function setImage(image, product){
     let img = document.createElement("img");                    //crear la etiqueta <img>
     img.setAttribute('src', product.image);
+    img.classList.add('zoom');
     img.height = 250
     img.width = 250
     image.appendChild(img)
@@ -103,7 +104,7 @@ function getLink(col) {return col[4]}
 function setLink(link, product) {
     let a = document.createElement('a');
     let node = document.createTextNode('Subastar');
-    a.setAttribute('href', window.location.pathname + 'product/' + product._id);
+    a.setAttribute('href', window.location.pathname + 'productos/' + product._id);
     a.appendChild(node);
     link.appendChild(a);
 }
