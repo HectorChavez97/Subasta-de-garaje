@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- Font Awesome -->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
@@ -18,58 +19,64 @@
         integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
     <!--Custom styles-->
-    <link rel="stylesheet" type="text/css" href="../stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="mb-1 navbar navbar-expand-lg navbar-dark default-color">
         <a id="link" href="/"><img class="logo"
-                src="https://jumpseller.s3.eu-west-1.amazonaws.com/store/alfonso-dumas/assets/subastas.png" alt=""></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/">Inicio <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Pedidos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Nosotros</a>
-                </li>
-
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" data-nav-role="signin" type="button"
-                        id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cuenta
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <div id="login-div">
-                            <button type="button" class="btn btn-primary" onclick="'/login'">Iniciar sesion</button>
-
-                            <p class="dropdown-header">¿Eres cliente nuevo? <a href="registro.html"> Registrate
-                                    aquí.</a></p>
-                            <div class="dropdown-divider"></div>
-                        </div>
-
-                        <div>
-                            <a class="dropdown-item" href="subastando.html">Mis subastas</a>
-                            <a class="dropdown-item" href="subastas_activas.html">Subastas activas</a>
-                            <a class="dropdown-item" href="historial_subastas.html">Historial de subastas</a>
-                            <a class="dropdown-item" href="publicar.html">Publicar</a>
-                            <div class="dropdown-divider"></div>
-
-                            <a class="dropdown-item" href="">Ayuda</a>
-                        </div>
-                    </div>
-                </div>
-            </ul>
-    </nav>
-
+            src="https://jumpseller.s3.eu-west-1.amazonaws.com/store/alfonso-dumas/assets/subastas.png" alt=""></a>
     
+        <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+          <ul class="navbar-nav mr-auto">
+    
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Inicio <span class="sr-only">(current)</span></a>
+            </li>
+    
+            <li class="nav-item">
+              <a class="nav-link" href="#">Nosotros</a>
+            </li>
+    
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">Categorias
+              </a>
+    
+              <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
+                <a class="dropdown-item" href="#">Electronica</a>
+                <a class="dropdown-item" href="#">Hogar</a>
+                <a class="dropdown-item" href="#">Ropa</a>
+              </div>
+            </li>
+          </ul>
+    
+          <ul class="navbar-nav ml-auto nav-flex-icons">
+            <li class="nav-item" id="login">
+              <a class="nav-link"  href="/login">Iniciar sesion</a>
+            </li>
+    
+            <li class="nav-item"  id="registro">
+              <a class="nav-link" href="/registro">Registro</a>
+            </li>
+    
+            <li class="nav-item dropdown" id="menuUsuario">
+              <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false"> <i class="fas fa-user"></i>
+              </a>
+    
+              <div class="dropdown-menu dropdown-menu-right dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
+                <a class="dropdown-item" href="/login">Mis subastas</a>
+                <a class="dropdown-item" href="/registro">Subastas activas</a>
+                <a class="dropdown-item" href="/login">Historial de subastas</a>
+                <a class="dropdown-item" href="/registro">Publicar</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+
 
     <hr class="my-2">
 
@@ -80,93 +87,93 @@
                     <h3>Registrate</h3>
                 </div>
                 <div class="container">
-                <div class="card-body">
-                    <form id="form">
-                        <div class="form-row">
-                            <div class="form-group col ">
-                                <label>Nombre </label>
-                                <input type="text" class="form-control" placeholder="" required="true">
+                    <div class="card-body">
+                        <form id="form">
+                            <div class="form-row">
+                                <div class="form-group col ">
+                                    <label>Nombre </label>
+                                    <input type="text" class="form-control" placeholder="" required="true">
+                                </div>
+                                <div class="form-group col">
+                                    <label>Apellidos</label>
+                                    <input type="text" class="form-control" placeholder=" " required>
+                                </div>
                             </div>
-                            <div class="form-group col">
-                                <label>Apellidos</label>
-                                <input type="text" class="form-control" placeholder=" " required>
+                            <div class="form-group">
+                                <label for="email">Correo electronico</label>
+                                <input type="email" class="form-control" placeholder="email" name="email" required>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Correo electronico</label>
-                            <input type="email" class="form-control" placeholder="email" name="email" required>
-                        </div>
-                        <div class="form-group">
+                            <div class="form-group">
                                 <label for="gender">Sexo</label>
-                            <label class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="gender" value="hombre">
-                                <span class="form-check-label"> Hombre </span>
-                            </label>
-                            <label class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="gender" value="mujer">
-                                <span class="form-check-label"> Mujer</span>
-                            </label>
-                            <label class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="gender" value="otro" checked>
-                                <span class="form-check-label"> Otro</span>
-                            </label>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label>Ciudad</label>
-                                <input type="text" class="form-control" required>
+                                <label class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" value="hombre">
+                                    <span class="form-check-label"> Hombre </span>
+                                </label>
+                                <label class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" value="mujer">
+                                    <span class="form-check-label"> Mujer</span>
+                                </label>
+                                <label class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" value="otro" checked>
+                                    <span class="form-check-label"> Otro</span>
+                                </label>
                             </div>
-                            <div class="form-group col-md-6">
-                                <label>Estado</label>
-                                <select id="inputState" class="form-control" required>
-                                    <option value="Aguascalientes" selected>Aguascalientes</option>
-                                    <option value="Baja California">Baja California</option>
-                                    <option value="Baja California Sur">Baja California Sur</option>
-                                    <option value="Campeche">Campeche</option>
-                                    <option value="Coahuila">Coahuila de Zaragoza</option>
-                                    <option value="Colima">Colima</option>
-                                    <option value="Chiapas">Chiapas</option>
-                                    <option value="Chihuahua">Chihuahua</option>
-                                    <option value="CDM">Ciudad de Mexico</option>
-                                    <option value="Durango">Durango</option>
-                                    <option value="Guanajuato">Guanajuato</option>
-                                    <option value="Guerrero">Guerrero</option>
-                                    <option value="Hidalgo">Hidalgo</option>
-                                    <option value="Jalisco">Jalisco</option>
-                                    <option value="México">México</option>
-                                    <option value="Michoacán">Michoacán de Ocampo</option>
-                                    <option value="Morelos">Morelos</option>
-                                    <option value="Nayarit">Nayarit</option>
-                                    <option value="Nuevo León">Nuevo León</option>
-                                    <option value="Oaxaca">Oaxaca</option>
-                                    <option value="Puebla">Puebla</option>
-                                    <option value="Querétaro">Querétaro</option>
-                                    <option value="Quintana Roo">Quintana Roo</option>
-                                    <option value="San Luis Potosí">San Luis Potosí</option>
-                                    <option value="Sinaloa">Sinaloa</option>
-                                    <option value="Sonora">Sonora</option>
-                                    <option value="Tabasco">Tabasco</option>
-                                    <option value="Tamaulipas">Tamaulipas</option>
-                                    <option value="Tlaxcala">Tlaxcala</option>
-                                    <option value="Veracruz">Veracruz de Ignacio de la Llave</option>
-                                    <option value="Yucatán">Yucatán</option>
-                                    <option value="Zacatecas">Zacatecas</option>
-                                </select>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label>Ciudad</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Estado</label>
+                                    <select id="inputState" class="form-control" required>
+                                        <option value="Aguascalientes" selected>Aguascalientes</option>
+                                        <option value="Baja California">Baja California</option>
+                                        <option value="Baja California Sur">Baja California Sur</option>
+                                        <option value="Campeche">Campeche</option>
+                                        <option value="Coahuila">Coahuila de Zaragoza</option>
+                                        <option value="Colima">Colima</option>
+                                        <option value="Chiapas">Chiapas</option>
+                                        <option value="Chihuahua">Chihuahua</option>
+                                        <option value="CDM">Ciudad de Mexico</option>
+                                        <option value="Durango">Durango</option>
+                                        <option value="Guanajuato">Guanajuato</option>
+                                        <option value="Guerrero">Guerrero</option>
+                                        <option value="Hidalgo">Hidalgo</option>
+                                        <option value="Jalisco">Jalisco</option>
+                                        <option value="México">México</option>
+                                        <option value="Michoacán">Michoacán de Ocampo</option>
+                                        <option value="Morelos">Morelos</option>
+                                        <option value="Nayarit">Nayarit</option>
+                                        <option value="Nuevo León">Nuevo León</option>
+                                        <option value="Oaxaca">Oaxaca</option>
+                                        <option value="Puebla">Puebla</option>
+                                        <option value="Querétaro">Querétaro</option>
+                                        <option value="Quintana Roo">Quintana Roo</option>
+                                        <option value="San Luis Potosí">San Luis Potosí</option>
+                                        <option value="Sinaloa">Sinaloa</option>
+                                        <option value="Sonora">Sonora</option>
+                                        <option value="Tabasco">Tabasco</option>
+                                        <option value="Tamaulipas">Tamaulipas</option>
+                                        <option value="Tlaxcala">Tlaxcala</option>
+                                        <option value="Veracruz">Veracruz de Ignacio de la Llave</option>
+                                        <option value="Yucatán">Yucatán</option>
+                                        <option value="Zacatecas">Zacatecas</option>
+                                    </select>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label>Contrasena</label>
-                            <input class="form-control" type="password" id="firstPassword" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Validar contrasena</label>
-                            <input class="form-control" type="password" id="newPassword" required>
-                        </div>
-                        <button class="btn float-right app_btn"
-                            id="register-button" type="submit">Registrate</button>
-                    </form>
+                            <div class="form-group">
+                                <label>Contrasena</label>
+                                <input class="form-control" type="password" id="firstPassword" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Validar contrasena</label>
+                                <input class="form-control" type="password" id="newPassword" required>
+                            </div>
+                            <button class="btn float-right app_btn" id="register-button"
+                                type="submit">Registrate</button>
+                        </form>
+                    </div>
                 </div>
-            </div>
                 <div class="card-footer">
                     <div class="d-flex justify-content-center links">
                         Ya tienes una cuenta?<a href="login.html" id="registrate">Inicia sesion aqui.</a>
@@ -178,9 +185,15 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
 
     <script src="registro.js"></script>
 </body>

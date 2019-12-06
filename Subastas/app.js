@@ -27,6 +27,11 @@ app.use('/login'        ,express.static(__dirname+"/public/loginUsuario"))
 app.use('/registro'     ,express.static(__dirname+"/public/registro"))
 app.use('/publicar'     ,express.static(__dirname + "/public/publicar"))
 app.use('/productos/:id',express.static(__dirname + '/public/producto'));
+app.use('/electronica'   ,express.static(__dirname + '/public/inicioUsario'));
+app.use('/ropa'         ,express.static(__dirname + '/public/inicioUsario'));
+app.use('/hogar'         ,express.static(__dirname + '/public/inicioUsario'));
+
+
 
 app.use('/api/inicio',  inicioRouter);
 app.use('/api/login',   loginRouter);

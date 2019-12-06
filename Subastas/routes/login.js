@@ -19,7 +19,7 @@ router.post('/', async (req, res) => {
 
             let token = jwt.sign({user}, 'secretKey', {expiresIn: '5m'});
 
-            res.status(200).cookie('refreshtoken' , token, { httpOnly: true}).send({
+            res.status(200).cookie('refreshtoken' , token, { httpOnly: false}).send({
                 token
             })
         }

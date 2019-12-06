@@ -1,6 +1,49 @@
 let container = document.querySelector(".container")            //container que tiene el esqueleto de productos
+let actualCookie = document.cookie.indexOf('refreshtoken');
+let login = document.getElementById('login');
+let registro = document.getElementById('registro');
+let menuUsuario = document.getElementById('menuUsuario')
 
+
+cookieExists()
 loadProducts()
+
+function cookieExists() {
+    if(actualCookie != -1) { //si es diferente de -1, existe la cookie
+        login.classList.add('hidden');
+        registro.classList.add('hidden');
+
+  
+    } else {
+
+
+       /* menuUsuario.classList.add('hidden');
+        let colOne = container.querySelector('#colOne .link');
+        let colTwo = container.querySelector('#colTwo .link');
+        let colThree = container.querySelector('#colThree .link');
+        let colFour = container.querySelector('#colFour .link');
+        let colFive = container.querySelector('#colFive .link');
+        let colSix = container.querySelector('#colSix .link');
+        let colSeven = container.querySelector('#colSeven .link');
+        let colEight = container.querySelector('#colEight .link');
+        let colNine = container.querySelector('#colNine .link');
+
+
+        let modalAlert = document.getElementById('modalAlert')
+        colOne.addEventListener("mouseover", function(){ alert("Necesitas loguear para subastar");window.location.href = '/login';}); 
+        colTwo.addEventListener("mouseover", function(){ alert("Necesitas loguear para subastar"); window.location.href = '/login';});
+        colThree.addEventListener("mouseover", function(){ alert("Necesitas loguear para subastar"); window.location.href = '/login';});
+        colFour.addEventListener("mouseover", function(){ alert("Necesitas loguear para subastar");window.location.href = '/login';}); 
+        colFive.addEventListener("mouseover", function(){ alert("Necesitas loguear para subastar");window.location.href = '/login';}); 
+        colSix.addEventListener("mouseover", function(){ alert("Necesitas loguear para subastar");window.location.href = '/login';}); 
+        colSeven.addEventListener("mouseover", function(){ alert("Necesitas loguear para subastar");window.location.href = '/login';}); 
+        colEight.addEventListener("mouseover", function(){ alert("Necesitas loguear para subastar");window.location.href = '/login';}); 
+        colNine.addEventListener("mouseover", function(){ alert("Necesitas loguear para subastar");window.location.href = '/login';}); 
+*/
+
+
+    }
+}
 
 function loadProducts(){
     let req = new XMLHttpRequest()
@@ -102,11 +145,20 @@ function setClock(clock, product){
 
 function getLink(col) {return col[4]}
 function setLink(link, product) {
-    let a = document.createElement('a');
-    let node = document.createTextNode('Subastar');
-    a.setAttribute('href', window.location.pathname + 'productos/' + product._id);
-    a.appendChild(node);
-    link.appendChild(a);
+   if(actualCookie != -1){
+    let button = document.createElement("button")
+    let node = document.createTextNode("subastar")
+    button.addEventListener("click", () => window.open(window.location.pathname + "productos/" + product._id))
+    button.appendChild(node)
+    link.appendChild(button)
+   }
+   else{
+    let button = document.createElement("button")
+    let node = document.createTextNode("subastar")
+    button.addEventListener("click", () => window.open(window.location.pathname + "login/"))
+    button.appendChild(node)
+    link.appendChild(button)
+   }
 }
 
 function jjj(node, product){
@@ -141,6 +193,9 @@ function ddd(hour){
 function productListener(){ 
     window.open("producto.html")
 }
+
+
+
 
 
 /*

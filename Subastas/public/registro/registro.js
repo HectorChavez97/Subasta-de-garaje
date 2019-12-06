@@ -7,6 +7,21 @@ let newPassword = document.getElementById('newPassword').value;
 let invalidInput = form.querySelectorAll('input:invalid');
 
 //form.addEventListener('click',(e) => registerBListener(e));
+let actualCookie = document.cookie.indexOf('refreshtoken');
+let login = document.getElementById('login');
+let registro = document.getElementById('registro');
+
+cookieExists()
+
+function cookieExists() {
+    if(actualCookie != -1) { //si esta logueado
+        login.classList.add('hidden');
+        registro.classList.add('hidden');
+    } else {
+        menuUsuario.classList.add('hidden');
+        let a = document.getElementsByClassName(a).onclick = function(){alert('Debes ingresar sesion')};
+    }
+}
 registerB.addEventListener("click", registerBListener)
 
 /*

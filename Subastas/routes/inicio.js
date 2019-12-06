@@ -16,6 +16,17 @@ router.get('/', verificarToken, async (req, res) => {
     return res.status(403).send(products)
 })
 
+router.get('/:categoria', async (req, res) => {
+    if(req.params.categoria == 'undefined') {
+        return res.status(400).send('Falta un parametro: categoria de subasta');
+    }
+    
+    let product = Product.find({categoria: req.params.categoria}).limit(9);
+    if(!product) return res.status(403)
+    else return res.status(200).send(product);
+    
+})
+
 function verificarToken(req, res, next){
     if(req.cookies.refreshtoken != undefined && req.headers['authorization'] != undefined){
         const authorization = req.headers['authorization']
