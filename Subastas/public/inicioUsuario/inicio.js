@@ -103,7 +103,7 @@ function getLink(col) {return col[4]}
 function setLink(link, product) {
     let a = document.createElement('a');
     let node = document.createTextNode('Subastar');
-    a.setAttribute('href', window.location.pathname + product.descripcion);
+    a.setAttribute('href', window.location.pathname + 'product/' + product._id);
     a.appendChild(node);
     link.appendChild(a);
 }

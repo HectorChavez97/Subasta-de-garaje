@@ -92,4 +92,8 @@ function getFile(){
     return container.getElementsByTagName("input")[6].value
 }
 
+function getURL() {
+return window.path
+}
+
 
