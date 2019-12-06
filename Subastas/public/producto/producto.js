@@ -13,6 +13,7 @@ let msubasta     = document.getElementById("subasta")
 let msubastar    = document.getElementById("subastar")
 let subastaVal   = document.getElementById("subastaValue")
 
+
 let response;
 getElement()
 function getElement(){
