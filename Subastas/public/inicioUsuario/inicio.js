@@ -2,7 +2,6 @@ let container = document.querySelector(".container")            //container que 
 
 loadProducts()
 
-let number = product.titulo + product.precioInicial;
 function loadProducts(){
     let req = new XMLHttpRequest()
     req.open("GET","http://localhost:3000/api/inicio", true)
@@ -104,7 +103,7 @@ function getLink(col) {return col[4]}
 function setLink(link, product) {
     let a = document.createElement('a');
     let node = document.createTextNode('Subastar');
-    a.setAttribute('href', window.location.pathname + product.descripcion);
+    a.setAttribute('href', window.location.pathname + 'product/' + product._id);
     a.appendChild(node);
     link.appendChild(a);
 }
