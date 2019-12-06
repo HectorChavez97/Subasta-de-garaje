@@ -1,9 +1,9 @@
 let publicarB = document.getElementById("publicar-button")
 let container = document.querySelector(".container")
-//publicarB.addEventListener("click", publicarBListener)
+publicarB.addEventListener("click", publicarBListener)
 let form = document.getElementById('form');
 
-form.addEventListener('change',(e) => publicarBListener(event));
+//form.addEventListener('change',(e) => publicarBListener(event));
 
 
 function publicarBListener(event){
@@ -32,7 +32,7 @@ function validateCompleteData(e){
 
 function publishProduct(){
     let req = new XMLHttpRequest()
-    req.open("POST","http://localhost:3000/productos", true)
+    req.open("POST","http://localhost:3000/api/publicar", true)
     req.setRequestHeader('Content-Type','application/json')
     req.send(JSON.stringify(new getForm()))
 
@@ -49,6 +49,7 @@ function publishProduct(){
 function getForm(){
     this.titulo = getTitulo()
     this.descripcion = getDescription()
+    this.categoria = getCategoria();
     this.image = getFile()
     this.estado = getEstado()
     this.finFechaDia = getDay()
@@ -63,6 +64,10 @@ function getTitulo(){
 
 function getDescription(){
     return document.getElementById("description").value
+}
+
+function getCategoria() {
+    return document.getElementById('categoria').value;
 }
 
 function getEstado(){

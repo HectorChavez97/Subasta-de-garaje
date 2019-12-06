@@ -9,6 +9,7 @@ let invalidInput = form.querySelectorAll('input:invalid');
 //form.addEventListener('click',(e) => registerBListener(e));
 registerB.addEventListener("click", registerBListener)
 
+/*
 function validandoDatos(e) {
     if (invalidInput.length == 6) {
         botonRegistro.disabled = true;
@@ -19,7 +20,7 @@ function validandoDatos(e) {
             botonRegistro.disabled = true;
         }
     }
-}
+}*/
 
 function registerBListener(event){
     registerUser()
