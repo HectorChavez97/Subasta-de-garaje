@@ -1,7 +1,6 @@
 let container = document.querySelector(".container")            //container que tiene el esqueleto de productos
 
 loadProducts()
-
 function loadProducts(){
     let req = new XMLHttpRequest()
     req.open("GET","http://localhost:3000/api/inicio", true)
@@ -130,14 +129,4 @@ function productListener(){
 }
 
 
-/*
-var xmlhttp = new XMLHttpRequest();
-xmlhttp.onreadystatechange = function() {
-  if (this.readyState == 4 && this.status == 200) {
-    var arrayProductos = JSON.parse(this.responseText);
-    document.getElementById("demo").innerHTML = myObj.name;
-  }
-};
-xmlhttp.open("GET", "http://localhost:3000/productos", true);
-xmlhttp.send();
-*/
+setInterval(loadProducts, 1000)
