@@ -2,6 +2,7 @@ let container = document.querySelector(".container")            //container que 
 
 loadProducts()
 
+let number = product.titulo + product.precioInicial;
 function loadProducts(){
     let req = new XMLHttpRequest()
     req.open("GET","http://localhost:3000/api/inicio", true)
@@ -42,6 +43,9 @@ function addData(col, product){
 
     let clock = getClock(colElements)
     setClock(clock, product)
+
+    let link = getLink(colElements)
+    setLink(link, product)
 }
 
 function getAllColumns(){
@@ -94,6 +98,15 @@ function setClock(clock, product){
     clock.appendChild(clockP)
 
     jjj(node, product)
+}
+
+function getLink(col) {return col[4]}
+function setLink(link, product) {
+    let a = document.createElement('a');
+    let node = document.createTextNode('Subastar');
+    a.setAttribute('href', window.location.pathname + product.descripcion);
+    a.appendChild(node);
+    link.appendChild(a);
 }
 
 function jjj(node, product){
