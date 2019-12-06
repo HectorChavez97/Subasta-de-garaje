@@ -6,9 +6,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   <!-- Font Awesome -->
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
@@ -52,15 +52,15 @@
       </ul>
 
       <ul class="navbar-nav ml-auto nav-flex-icons">
-        <li class="nav-item" id="login">
-          <a class="nav-link"  href="/login">Iniciar sesion</a>
+        <li class="nav-item">
+          <a class="nav-link" href="/login">Iniciar sesion</a>
         </li>
 
-        <li class="nav-item"  id="registro">
+        <li class="nav-item">
           <a class="nav-link" href="/registro">Registro</a>
         </li>
 
-        <li class="nav-item dropdown" id="menuUsuario">
+        <li class="nav-item dropdown hidden" id="menuUsuario">
           <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false"> <i class="fas fa-user"></i>
           </a>
@@ -76,22 +76,62 @@
     </div>
   </nav>
 
-    <hr class="my-2">
+  <hr class="my-2">
 
-    <div class="container">
-        <div class="row">
-            <div class="col" id="colOne">
-                <div><img class="img" style="max-width: 80%;"></div>
-            </div>
+  <div class="container">
+    <div class="row">
+      <div class="col" id="colOne">
+        <div id="img"></div>
+      </div>
 
-            <div class="col" id="colTwo">
-                <div class="title"></div>
-                <div class="descripcion"></div>
-                <div class="condicion"></div>
-                <div class="tiempo"></div>
-                <div class="subastar"><button></button></div>
-            </div>
+      <div class="col" id="colTwo">
+        <div id="title"></div>
+        <div id="descripcion"></div>
+        <br>
+
+        <div><h4>Condicion del producto</h4></div>
+        <div id="condicion"></div>
+        <br>
+        
+        <div><h4>Tiempo restante</h4></div>
+        <div id="tiempo">
+          <table class="table">
+            <tbody>
+              <tr>
+                <th scope=row" id="days">0</th>
+                <th id="hours">0</th>
+                <th id="minutes">0</th>
+                <th id="seconds">0</th>
+              </tr>
+              <tr>
+                <td scope=row" id="days">Dias</td>
+                <td id="hours">Horas</td>
+                <td id="minutes">Minutos</td>
+                <td id="seconds">Segundos</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+
+        <div class="row">
+          <div class="col">
+              <div><h4>Cantidad actual: </h4></div>
+              <div id="subasta"></div>
+          </div>
+
+          <div class="col" id="subastar"> 
+              <div><h4>Ofertar: </h4></div>
+              
+              <div id="subastar" class="form-group">
+                  <form>
+                      <input type="number" class="form-control" id="subastaValue" min=0>
+                      <input class="btn btn-primary" type="button" value="Ofertar" onclick="onClickButton()">
+                  </form>
+              </div>
+          </div>
+        </div>
+        
+      </div>
     </div>
   </div>
 
@@ -107,20 +147,7 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
   </script>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
-
-    <script src="producto.js"></script>
-
+  <script src="producto.js"></script>
 </body>
 
 </html>

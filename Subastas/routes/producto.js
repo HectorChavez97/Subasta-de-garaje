@@ -1,19 +1,28 @@
-const express = require('express');
-const router = express.Router();
-const Product = require('../models/Product')
+const Producto  = require('../models/Product')
+const express   = require('express');
+const router    = express.Router();
 
+router.get('/:id', async (req, res) => {
+    let id = req.params.id.replace(":", "")
 
-router.get('/:id',  (req, res) => {
-    if(req.params.id == 'undefined') {
-        return res.status(400).send('Falta un parametro: ID de subasta');
-    }
-
-
-    Product.findOne({
-        id: req.params.id
-    }).then(doc =>{res.json(doc)})
-    .catch(err => {
-        res.status(500).json(err);
-    })
+    const product = await Producto.find({_id: id})
+    
+    if(!product) return res.status(403).send("No existe elemento con ese ID")
+    else         return res.status(200).send(product);
 })
+
+router.patch('/:id', async (req, res) => {
+    let id = req.params.id.replace(":", "")
+
+    const product = await Producto.findOne({_id: id})
+
+    if(!product) return res.status(403).send("incorrecto")
+
+    product.precioActual = req.body.precioActual
+    await product.save()
+    
+    return res.status(200).send("correcto")
+})
+
+
 module.exports = router;

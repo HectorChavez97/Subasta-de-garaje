@@ -52,7 +52,6 @@ router.get('/', (req, res) => {
     if(!req.query.titulo) {
         return res.status(400).send('Falta un parametro: titulo de subasta');
     }
-
     Product.find({ //find() -> varios mismo nombre
         titulo: req.query.titulo
     }).then(doc =>{res.json(doc)})
@@ -60,20 +59,17 @@ router.get('/', (req, res) => {
         res.status(500).json(err);
     })
 })
-
 //ACTUALIZAR PRODUCTO
 router.patch('/', (req, res) => {
     if(!req.query.titulo) {
         return res.status(400).send('Falta titulo de la subasta para modificar');
     }
-
     Product.findOneAndUpdate({
         titulo: req.query.titulo
     }, req.body, {new:true}).then(doc => {
         res.json(doc)
     }).catch(err=>{res.status(500).json(err)})
 })
-
 //BORRAR PRODUCTO SUBASTA
 router.delete('/', (req, res) => {
     if(!req.query.titulo) {
