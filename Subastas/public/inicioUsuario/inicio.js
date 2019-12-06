@@ -9,13 +9,11 @@ cookieExists()
 loadProducts()
 
 function cookieExists() {
-    if(actualCookie != -1) { //si es diferente de -1, existe la cookie
+    if(actualCookie == 0) { //si es diferente de -1, existe la cookie
         login.classList.add('hidden');
         registro.classList.add('hidden');
-
-  
     } else {
-
+        menuUsuario.classList.add('hidden');
 
        /* menuUsuario.classList.add('hidden');
         let colOne = container.querySelector('#colOne .link');

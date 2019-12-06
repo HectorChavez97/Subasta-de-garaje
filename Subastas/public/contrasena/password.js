@@ -2,7 +2,7 @@ let actualCookie = document.cookie.indexOf('refreshtoken');
 let login = document.getElementById('login');
 let registro = document.getElementById('registro');
 
-cookieExists()
+cookieExists();
 
 
 function cookieExists() {

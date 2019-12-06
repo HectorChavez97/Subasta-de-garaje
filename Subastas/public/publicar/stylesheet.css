@@ -350,3 +350,7 @@ input:focus{
 .row{
     padding-top: 30px;
 }
+
+.hidden {
+    display: none;
+}
