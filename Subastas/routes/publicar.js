@@ -29,8 +29,10 @@ router.post('/', async(req, res) => {
                     finFechaDia: req.body.finFechaDia,
                     finFechaHora: req.body.finFechaHora,
                     autor: req.body.autor,
-                    precioInicial: req.body.precioInicial
+                    precioInicial: req.body.precioInicial,
+                    precioActual: req.body.precioInicial
                 });
+                
                 await product.save();
                 res.status(201).send(product);
             } else {

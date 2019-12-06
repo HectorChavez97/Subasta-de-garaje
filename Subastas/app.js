@@ -33,6 +33,7 @@ app.use('/hogar'         ,express.static(__dirname + '/public/inicioUsario'));
 
 
 
+
 app.use('/api/inicio',  inicioRouter);
 app.use('/api/login',   loginRouter);
 app.use('/api/logout',  logoutRouter);
