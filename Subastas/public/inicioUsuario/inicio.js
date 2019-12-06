@@ -1,7 +1,6 @@
 let container = document.querySelector(".container")            //container que tiene el esqueleto de productos
 
 loadProducts()
-
 function loadProducts(){
     let req = new XMLHttpRequest()
     req.open("GET","http://localhost:3000/api/inicio", true)
@@ -110,15 +109,13 @@ function setLink(link, product) {
 
 function jjj(node, product){
     let currentT = new Date()
-    let productT = new Date("November 19, 2019 " + product.finFechaHora)
+    let productT = new Date(product.finFechaDia + " " + product.finFechaHora)
 
     let currentTime = currentT.getTime()
     let productTime = productT.getTime()
 
     let hour = ddd(productTime - currentTime)
     node.textContent = hour
-
-    //setInterval(jjj(node, product), 1000)
 }
 
 function ddd(hour){
@@ -131,25 +128,10 @@ function ddd(hour){
     m %= 60;
     s %= 60;
 
+    h = (h < 10) ? "0" + h : h;
     m = (m < 10) ? "0" + m : m;
     s = (s < 10) ? "0" + s : s;
 
-    return h + ":" + m  + ":" + s 
+    return d + ": " + h + ":" + m  + ":" + s 
 }
 
-function productListener(){ 
-    window.open("producto.html")
-}
-
-
-/*
-var xmlhttp = new XMLHttpRequest();
-xmlhttp.onreadystatechange = function() {
-  if (this.readyState == 4 && this.status == 200) {
-    var arrayProductos = JSON.parse(this.responseText);
-    document.getElementById("demo").innerHTML = myObj.name;
-  }
-};
-xmlhttp.open("GET", "http://localhost:3000/productos", true);
-xmlhttp.send();
-*/

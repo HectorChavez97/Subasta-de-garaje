@@ -23,98 +23,131 @@
 </head>
 
 <body>
-        <nav class="mb-1 navbar navbar-expand-lg navbar-dark default-color">
-                <a id="link" href="/"><img class="logo"
-                    src="https://jumpseller.s3.eu-west-1.amazonaws.com/store/alfonso-dumas/assets/subastas.png" alt=""></a>
-            
-                <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
-                  <ul class="navbar-nav mr-auto">
-            
-                    <li class="nav-item active">
-                      <a class="nav-link" href="/">Inicio <span class="sr-only">(current)</span></a>
-                    </li>
-            
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Nosotros</a>
-                    </li>
-            
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">Categorias
-                      </a>
-            
-                      <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
-                        <a class="dropdown-item" href="#">Electronica</a>
-                        <a class="dropdown-item" href="#">Hogar</a>
-                        <a class="dropdown-item" href="#">Ropa</a>
-                      </div>
-                    </li>
-                  </ul>
-            
-                  <ul class="navbar-nav ml-auto nav-flex-icons">
-                    <li class="nav-item">
-                      <a class="nav-link" href="/login">Iniciar sesion</a>
-                    </li>
-            
-                    <li class="nav-item">
-                      <a class="nav-link" href="/registro">Registro</a>
-                    </li>
-            
-                    <li class="nav-item dropdown hidden" id="menuUsuario">
-                      <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false"> <i class="fas fa-user"></i>
-                      </a>
-            
-                      <div class="dropdown-menu dropdown-menu-right dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
-                        <a class="dropdown-item" href="/login">Mis subastas</a>
-                        <a class="dropdown-item" href="/registro">Subastas activas</a>
-                        <a class="dropdown-item" href="/login">Historial de subastas</a>
-                        <a class="dropdown-item" href="/registro">Publicar</a>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </nav>
-        
-    <hr class="my-2">
+  <nav class="mb-1 navbar navbar-expand-lg navbar-dark default-color">
+    <a id="link" href="/"><img class="logo"
+        src="https://jumpseller.s3.eu-west-1.amazonaws.com/store/alfonso-dumas/assets/subastas.png" alt=""></a>
 
-    <div class="container">
-        <table class="table table-bordered">
-            <tr>
-                <td scope="col"><div id="user-data"></div></td>
-                <td scope="col"><div id="title"></div></td>
-                <td rowspan="2"><div id="description"></div></td>
-            </tr>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+      <ul class="navbar-nav mr-auto">
 
-            <tr>
-                <td scope="col"><div id="start-value"></div></td>
-                <td rowspan="3"><div id="img"></div></td>
-            </tr>
-            <tr>
-                <td scope="row"><div id="current-value"></div></td>
-                <td rowspan="2"><div id="time"></div></td>
-            </tr>
-            <tr>
-                <th scope="row"><div id="ofertar"></div></th>
-            </tr>
-        </table>
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Inicio <span class="sr-only">(current)</span></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Nosotros</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Categorias
+          </a>
+
+          <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
+            <a class="dropdown-item" href="#">Electronica</a>
+            <a class="dropdown-item" href="#">Hogar</a>
+            <a class="dropdown-item" href="#">Ropa</a>
+          </div>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav ml-auto nav-flex-icons">
+        <li class="nav-item">
+          <a class="nav-link" href="/login">Iniciar sesion</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/registro">Registro</a>
+        </li>
+
+        <li class="nav-item dropdown hidden" id="menuUsuario">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false"> <i class="fas fa-user"></i>
+          </a>
+
+          <div class="dropdown-menu dropdown-menu-right dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
+            <a class="dropdown-item" href="/login">Mis subastas</a>
+            <a class="dropdown-item" href="/registro">Subastas activas</a>
+            <a class="dropdown-item" href="/login">Historial de subastas</a>
+            <a class="dropdown-item" href="/registro">Publicar</a>
+          </div>
+        </li>
+      </ul>
     </div>
+  </nav>
 
+  <hr class="my-2">
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
+  <div class="container">
+    <div class="row">
+      <div class="col" id="colOne">
+        <div id="img"></div>
+      </div>
 
-    <script src="producto.js"></script>
-                
+      <div class="col" id="colTwo">
+        <div id="title"></div>
+        <div id="descripcion"></div>
+        <br>
+
+        <div><h4>Condicion del producto</h4></div>
+        <div id="condicion"></div>
+        <br>
+        
+        <div><h4>Tiempo restante</h4></div>
+        <div id="tiempo">
+          <table class="table">
+            <tbody>
+              <tr>
+                <th scope=row" id="days">0</th>
+                <th id="hours">0</th>
+                <th id="minutes">0</th>
+                <th id="seconds">0</th>
+              </tr>
+              <tr>
+                <td scope=row" id="days">Dias</td>
+                <td id="hours">Horas</td>
+                <td id="minutes">Minutos</td>
+                <td id="seconds">Segundos</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="row">
+          <div class="col">
+              <div><h4>Cantidad actual: </h4></div>
+              <div id="subasta"></div>
+          </div>
+
+          <div class="col" id="subastar"> 
+              <div><h4>Ofertar: </h4></div>
+              
+              <div id="subastar" class="form-group">
+                  <form>
+                      <input type="number" class="form-control" id="subastaValue" min=0>
+                      <input class="btn btn-primary" type="button" value="Ofertar" onclick="onClickButton()">
+                  </form>
+              </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+
+  <script src="producto.js"></script>
 </body>
 
 </html>
