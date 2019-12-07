@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <a href=""></a>
+
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -27,7 +28,7 @@
     <a id="link" href="/"><img class="logo"
         src="https://jumpseller.s3.eu-west-1.amazonaws.com/store/alfonso-dumas/assets/subastas.png" alt=""></a>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+    <div class="collapse navbar-collapse">
       <ul class="navbar-nav mr-auto">
 
         <li class="nav-item active">
@@ -44,20 +45,10 @@
           </a>
 
           <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
-            <a class="dropdown-item" href="/electronica">Electronica</a>
-            <a class="dropdown-item" href="/hogar">Hogar</a>
-            <a class="dropdown-item" href="/ropa">Ropa</a>
+            <a class="dropdown-item" onclick="electronica()">Electronica</a>
+            <a class="dropdown-item" onclick="hogar()">Hogar</a>
+            <a class="dropdown-item" onclick="ropa()">Ropa</a>
           </div>
-        </li>
-      </ul>
-
-      <ul class="navbar-nav ml-auto nav-flex-icons">
-        <li class="nav-item" id="login">
-          <a class="nav-link"  href="/login">Iniciar sesion</a>
-        </li>
-
-        <li class="nav-item"  id="registro">
-          <a class="nav-link" href="/registro">Registro</a>
         </li>
 
         <li class="nav-item dropdown" id="menuUsuario">
@@ -70,9 +61,30 @@
             <a class="dropdown-item" href="/registro">Subastas activas</a>
             <a class="dropdown-item" href="/login">Historial de subastas</a>
             <a class="dropdown-item" href="/publicar">Publicar</a>
+
+            <div class="dropdown-divider"></div>
+              <a class="dropdown-item" onclick="logout()">Cerrar sesion</a>
+            </div>
+
           </div>
         </li>
       </ul>
+
+      <ul class="navbar-nav ml-auto nav-flex-icons">
+        <li class="nav-item" id="login">
+          <a class="nav-link" href="/login">Iniciar sesion</a>
+        </li>
+
+        <li class="nav-item" id="registro">
+          <a class="nav-link" href="/registro">Registro</a>
+        </li>
+      </ul>
+
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+
     </div>
   </nav>
 
@@ -162,15 +174,12 @@
   </div>
 
   <ul class="pagination justify-content-center">
-    <li class="page-item disabled">
-      <a class="page-link" href="#" tabindex="-1">Previous</a>
-    </li>
+    <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">Previous</a></li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
     <li class="page-item"><a class="page-link" href="#">2</a></li>
     <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#">Next</a>
-    </li>
+    <li class="page-item"><a class="page-link" href="#">4</a></li>
+    <li class="page-item"><a class="page-link" href="#">Next</a></li>
   </ul>
 
   <!-- Optional JavaScript -->

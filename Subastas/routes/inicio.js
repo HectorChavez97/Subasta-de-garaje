@@ -23,8 +23,8 @@ router.get('/:categoria', async (req, res) => {
     
     let product = Product.find({categoria: req.params.categoria}).limit(9);
     if(!product) return res.status(403)
+
     else return res.status(200).send(product);
-    
 })
 
 function verificarToken(req, res, next){

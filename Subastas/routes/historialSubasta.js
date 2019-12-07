@@ -1,15 +1,18 @@
+const Product = require('../models/Product')
 const express = require('express');
-const router = express.Router();
 const atob = require('atob');
+const router = express.Router();
 
-router.get('/', (req, res) => {
+
+router.get('/', async (req, res) => {
     let token = req.cookies.refreshtoken
 
     if(token == undefined) return res.status(403).send("No estas loggeado")    
     let user = decodeToken(token);
+
+    let historialProduct = await Product.find({})
     console.log(user)
 
-    console.log(req.cookies.refreshtoken)
     res.send("historial")
 })
 

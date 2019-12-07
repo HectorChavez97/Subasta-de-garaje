@@ -187,22 +187,54 @@ function ddd(hour){
     return d + ": " + h + ":" + m  + ":" + s 
 }
 
-function productListener(){ 
-    window.open("producto.html")
+function electronica(){
+    let req = new XMLHttpRequest()
+    req.open("GET","  http://localhost:3000/api/categoria/?categoria=electronica", true)
+    req.send();
+    
+    req.onload = () => {      
+        if(req.status == 200){
+            showProducts(JSON.parse(req.response))     
+        }        
+    };
 }
 
+function hogar(){
+    let req = new XMLHttpRequest()
+    req.open("GET","  http://localhost:3000/api/categoria/?categoria=hogar", true)
+    req.send();
+    
+    req.onload = () => {      
+        if(req.status == 200){
+            showProducts(JSON.parse(req.response))     
+        }        
+    };
+}
 
+function ropa(){
+    let req = new XMLHttpRequest()
+    req.open("GET","  http://localhost:3000/api/categoria/?categoria=ropa", true)
+    req.send();
+    
+    req.onload = () => {      
+        if(req.status == 200){
+            showProducts(JSON.parse(req.response))     
+        }        
+    };
+}
 
-
-
-/*
-var xmlhttp = new XMLHttpRequest();
-xmlhttp.onreadystatechange = function() {
-  if (this.readyState == 4 && this.status == 200) {
-    var arrayProductos = JSON.parse(this.responseText);
-    document.getElementById("demo").innerHTML = myObj.name;
-  }
-};
-xmlhttp.open("GET", "http://localhost:3000/productos", true);
-xmlhttp.send();
-*/
+function logout(){
+    let req = new XMLHttpRequest()
+    req.open("GET", "http://localhost:3000/api/logout", true)
+    req.send();
+    
+    req.onload = () => {      
+        if(req.status == 200){
+            alert("Cerraste sesion")
+        }
+        else{
+            alert("No tienes una sesion activa")
+        }
+        location.reload(); 
+    };
+}
