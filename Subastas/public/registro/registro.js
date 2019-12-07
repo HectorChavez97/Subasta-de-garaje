@@ -11,7 +11,7 @@ let actualCookie = document.cookie.indexOf('refreshtoken');
 let login = document.getElementById('login');
 let registro = document.getElementById('registro');
 
-cookieExists()
+//cookieExists()
 
 function cookieExists() {
     if(actualCookie != -1) { //si esta logueado
@@ -19,7 +19,7 @@ function cookieExists() {
         registro.classList.add('hidden');
     } else {
         menuUsuario.classList.add('hidden');
-        let a = document.getElementsByClassName(a).onclick = function(){alert('Debes ingresar sesion')};
+        //let a = document.getElementsByClassName(a).onclick = function(){alert('Debes ingresar sesion')};
     }
 }
 registerB.addEventListener("click", registerBListener)

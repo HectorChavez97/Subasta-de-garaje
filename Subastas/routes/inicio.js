@@ -6,7 +6,7 @@ const router    = express.Router();
 
 
 router.get('/', verificarToken, async (req, res) => {
-    let products = await Product.find().limit(9).sort('created') 
+    let products = await Product.find().skip().limit(9).sort('created') 
 
     try {
         let token = await jwt.verify(req.token, 'secretKey')

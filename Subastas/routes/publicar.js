@@ -46,19 +46,19 @@ router.post('/', async(req, res) => {
         });
     }
 })
-/*
+
 //OBTENER POR TITULO
 router.get('/', (req, res) => {
     if(!req.query.titulo) {
         return res.status(400).send('Falta un parametro: titulo de subasta');
     }
     Product.find({ //find() -> varios mismo nombre
-        titulo: req.query.titulo
+        titulo: new RegExp(req.query.titulo, 'i')
     }).then(doc =>{res.json(doc)})
     .catch(err => {
         res.status(500).json(err);
     })
-})
+}) /*
 //ACTUALIZAR PRODUCTO
 router.patch('/', (req, res) => {
     if(!req.query.titulo) {
