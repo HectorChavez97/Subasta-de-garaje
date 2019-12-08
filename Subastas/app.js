@@ -12,7 +12,6 @@ const registroRouter    = require('./routes/registro')
 const publicarRouter    = require('./routes/publicar')
 const contrasenaRouter  = require('./routes/contrasena')
 const editarSRouter     = require('./routes/editarSubasta')
-const sActivasRouter    = require('./routes/subastasActivas')
 const miSubastaRouter   = require('./routes/miSubasta')
 const producto          = require('./routes/producto');
 const historialRouter   = require('./routes/historialSubasta');
@@ -40,7 +39,6 @@ app.use('/api/publicar', publicarRouter);
 app.use('/api/contrasena', contrasenaRouter);
 app.use('/api/editar',  editarSRouter);
 app.use('/api/historial', historialRouter);
-app.use('/api/subastasActivas', sActivasRouter);
 app.use('/api/miSubastas', miSubastaRouter);
 app.use('/api/producto', producto);
 app.use('/api/categorias', categorias);

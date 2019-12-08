@@ -48,9 +48,6 @@ function addData(col, product){
     let price = getPrice(colElements)
     setPrice(price, product)
 
-    let clock = getClock(colElements)
-    setClock(clock, product)
-
     let link = getLink(colElements)
     setLink(link, product)
 }
@@ -91,18 +88,10 @@ function setImage(image, product){
 
 function getPrice(col){ return col[2] }
 function setPrice(price, product){
-    let priceP = document.createElement("p");                   //crear la etiqueta <h3>
-    let node = document.createTextNode("Precio inicial: $" + product.precioInicial);  //crear el contenido que va dentro de h1
-    priceP.appendChild(node);                                   //agrega el contenido del nodo (node)
+    let priceP = document.createElement("p");                                       //crear la etiqueta <h3>
+    let node = document.createTextNode("Precio actual: $" + product.precioActual);  //crear el contenido que va dentro de h1
+    priceP.appendChild(node);                                                       //agrega el contenido del nodo (node)
     price.appendChild(priceP)
-}
-
-function getClock(col){ return col[3] }
-function setClock(clock, product){
-    let clockP = document.createElement("p");                   //crear la etiqueta <h4>
-    let node = document.createTextNode("");                   //crear el contenido que va dentro de h1
-    clockP.appendChild(node)
-    clock.appendChild(clockP)
 }
 
 function getLink(col) {return col[4]}

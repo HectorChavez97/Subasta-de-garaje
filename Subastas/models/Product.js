@@ -43,9 +43,13 @@ let productSchema = mongoose.Schema({
         default: 0,
         required: true
     },
-    precioInicial:{
+    activado:{
         type:Boolean,
         default: true,
+        required: true
+    },
+    usuariosIn:{
+        type: Array,
         required: true
     }
 });

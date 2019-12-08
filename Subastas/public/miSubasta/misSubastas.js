@@ -7,7 +7,7 @@ let menuUsuario = document.getElementById('menuUsuario')
 loadProducts()
 function loadProducts(){
     let req = new XMLHttpRequest()
-    req.open("GET","http://localhost:3000/api/historial", true)
+    req.open("GET","http://localhost:3000/api/miSubastas", true)
     req.send();
     
     req.onload = () => {      
@@ -74,11 +74,14 @@ function setPrice(price, product){
 }
 
 function getStatus(col){ return col[2] }
-function setStatus(clock, product){
+function setStatus(status, product){
+    let estatusEs 
+    product.activado? estatusEs="Activo":  estatusEs="No activo" 
+
     let clockP = document.createElement("p");                   //crear la etiqueta <h4>
-    let node = document.createTextNode(product.precioActual);                   //crear el contenido que va dentro de h1
+    let node = document.createTextNode(estatusEs);                   //crear el contenido que va dentro de h1
     clockP.appendChild(node)
-    clock.appendChild(clockP)
+    status.appendChild(clockP)
 }
 
 function getLink(col) {return col[3]}

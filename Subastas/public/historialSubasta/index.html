@@ -1,298 +1,206 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+<a href=""></a>
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <!-- Font Awesome -->
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <!-- Font Awesome -->
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
-    <!--Fontawesome CDN-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <!--Fontawesome CDN-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
-    <!--Custom styles-->
-    <link rel="stylesheet" type="text/css" href="../stylesheet.css">
+  <!--Custom styles-->
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 
 <body>
-    <nav class="mb-1 navbar navbar-expand-lg navbar-dark default-color">
-        <a id="link" href="/"><img class="logo"
-                src="https://jumpseller.s3.eu-west-1.amazonaws.com/store/alfonso-dumas/assets/subastas.png" alt=""></a>
+  <nav class="mb-1 navbar navbar-expand-lg navbar-dark default-color">
+    <a id="link" href="/"><img class="logo"
+        src="https://jumpseller.s3.eu-west-1.amazonaws.com/store/alfonso-dumas/assets/subastas.png" alt=""></a>
 
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav mr-auto">
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav mr-auto">
 
-                <li class="nav-item active">
-                    <a class="nav-link" href="/">Inicio <span class="sr-only">(current)</span></a>
-                </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Inicio <span class="sr-only">(current)</span></a>
+        </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Nosotros</a>
-                </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Nosotros</a>
+        </li>
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">Categorias
-                    </a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Categorias
+          </a>
 
-                    <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
-                        <a class="dropdown-item" href="/electronica">Electronica</a>
-                        <a class="dropdown-item" href="/hogar">Hogar</a>
-                        <a class="dropdown-item" href="/ropa">Ropa</a>
-                    </div>
-                </li>
+          <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
+            <a class="dropdown-item" href="/categorias/?categoria=electronica">Electronica</a>
+            <a class="dropdown-item" href="/categorias/?categoria=hogar">Hogar</a>
+            <a class="dropdown-item" href="/categorias/?categoria=ropa">Ropa</a>
+          </div>
+        </li>
+  
+        <li class="nav-item dropdown" id="menuUsuario">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false"> <i class="fas fa-user"></i>
+          </a>
 
-                <li class="nav-item dropdown" id="menuUsuario">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false"> <i class="fas fa-user"></i>
-                    </a>
+          <div class="dropdown-menu dropdown-menu-right dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
+            <a class="dropdown-item" href="/publicar">Publicar</a>
+            <a class="dropdown-item" href="/miSubasta">Mis subastas</a>
+            <a class="dropdown-item" href="/historial">Historial de subastas</a>
 
-                    <div class="dropdown-menu dropdown-menu-right dropdown-default"
-                        aria-labelledby="navbarDropdownMenuLink-333">
-                        <a class="dropdown-item" href="/login">Mis subastas</a>
-                        <a class="dropdown-item" href="/registro">Subastas activas</a>
-                        <a class="dropdown-item" href="/login">Historial de subastas</a>
-                        <a class="dropdown-item" href="/registro">Publicar</a>
-                    </div>
-                </li>
-            </ul>
-
-            <ul class="navbar-nav ml-auto nav-flex-icons">
-                <li class="nav-item" id="login">
-                    <a class="nav-link" href="/login">Iniciar sesion</a>
-                </li>
-
-                <li class="nav-item" id="registro">
-                    <a class="nav-link" href="/registro">Registro</a>
-                </li>
-            </ul>
-
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-
-        </div>
-    </nav>
-    <div class="jumbotron">
-        
-        <h1 class="display-3">Historial de subastas</h1>
-        <hr class="my-2">
-
-        <!-- Empieza lista de articulos -->
-
-        <div class="container">
-            <div class="row border-bottom-0">
-                <div class="col-sm">
-                    <h2>Artículo</h2>
-                </div>
-                <div class="col-sm">
-                    <h2>Fecha</h2>
-                </div>
-                <div class="col-sm">
-                    <h2>Cant. apostada</h2>
-                </div>
-                <div class="col-sm">
-                    <h2>Contactar</h2>
-                </div>
-            </div>
-            <hr>
-            <div class="row border-bottom">
-                <div class="col-sm">
-                    Televisión Samsung 60" Smart TV
-                </div>
-                <div class="col-sm">
-                    <p>03/04/2018</p>
-                </div>
-                <div class="col-sm">
-                    <p>$36,000</p>
-                </div>
-                <div class="col-sm">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Enviar
-                        mensaje</button>
-                </div>
-            </div>
-            <hr>
-
-            <div class="row border-bottom">
-                <div class="col-sm">
-                    Refresco Coca-Cola
-                </div>
-                <div class="col-sm ">
-                    <p>03/04/2018</p>
-                </div>
-                <div class="col-sm">
-                    <p>$9</p>
-                </div>
-                <div class="col-sm">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Enviar
-                        mensaje</button>
-                </div>
+            <div class="dropdown-divider"></div>
+              <a class="dropdown-item" onclick="logout()">Cerrar sesion</a>
             </div>
 
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Enviar mensaje al subastador</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="message-wrap col-lg-8">
-                                <div class="msg-wrap">
+          </div>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav ml-auto nav-flex-icons">
+        <li class="nav-item" id="login">
+          <a class="nav-link" href="/login">Iniciar sesion</a>
+        </li>
+
+        <li class="nav-item" id="registro">
+          <a class="nav-link" href="/registro">Registro</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <h1 class="display-3 text-center" id="tituloCategoria"></h1>
+  <hr class="my-2">
+  <div id="modalAlert"></div>
+
+  <div class="container">
+      <div class="row border-bottom-0">
+          <div class="col-sm text-center">
+              <h2>Artículo</h2>
+          </div>
+          <div class="col-sm text-center">
+              <h2>Imagen</h2>
+          </div>
+          <div class="col-sm text-center">
+              <h2>Precio inicial</h2>
+          </div>
+          <div class="col-sm text-center">
+              <h2>Status</h2>
+          </div>
+          <div class="col-sm text-center">
+              <h2>Subastar</h2>
+          </div>
+      </div>
+      <hr>
+      
+      <div class="row" id="rowOne">
+          <div class="col-sm title"> </div>
+          <div class="col-sm image"></div>
+          <div class="col-sm price"></div>
+          <div class="col-sm estatus"></div>
+          <div class="col-sm link"></div>
+      </div>
+
+      <div class="row" id="rowTwo">
+          <div class="col-sm title"> </div>
+          <div class="col-sm image"></div>
+          <div class="col-sm price"></div>
+          <div class="col-sm estatus"></div>
+          <div class="col-sm link"></div>
+      </div>
+
+      <div class="row" id="rowThree">
+          <div class="col-sm title"> </div>
+          <div class="col-sm image"></div>
+          <div class="col-sm price"></div>
+          <div class="col-sm estatus"></div>
+          <div class="col-sm link"></div>
+      </div>
+
+      <div class="row" id="rowFour">
+          <div class="col-sm title"> </div>
+          <div class="col-sm image"></div>
+          <div class="col-sm price"></div>
+          <div class="col-sm estatus"></div>
+          <div class="col-sm link"></div>
+      </div>
+
+      <div class="row" id="rowFive">
+          <div class="col-sm title"> </div>
+          <div class="col-sm image"></div>
+          <div class="col-sm price"></div>
+          <div class="col-sm estatus"></div>
+          <div class="col-sm link"></div>
+      </div>
+
+      <div class="row" id="rowSix">
+          <div class="col-sm title"> </div>
+          <div class="col-sm image"></div>
+          <div class="col-sm price"></div>
+          <div class="col-sm estatus"></div>
+          <div class="col-sm link"></div>
+      </div>
+
+      <div class="row" id="rowSeven">
+          <div class="col-sm title"> </div>
+          <div class="col-sm image"></div>
+          <div class="col-sm price"></div>
+          <div class="col-sm estatus"></div>
+          <div class="col-sm link"></div>
+      </div>
+
+      <div class="row" id="rowEight">
+          <div class="col-sm title"> </div>
+          <div class="col-sm image"></div>
+          <div class="col-sm price"></div>
+          <div class="col-sm estatus"></div>
+          <div class="col-sm link"></div>
+      </div>
+
+      <div class="row" id="rowNine">
+          <div class="col-sm title"> </div>
+          <div class="col-sm image"></div>
+          <div class="col-sm price"></div>
+          <div class="col-sm estatus"></div>
+          <div class="col-sm link"></div>
+      </div>
+  </div> <!-- FIN container -->
 
 
-                                    <div class="media msg ">
-                                        <a class="pull-left" href="#">
-                                            <img class="media-object" data-src="holder.js/64x64" alt="64x64"
-                                                style="width: 32px; height: 32px;"
-                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAACqUlEQVR4Xu2Y60tiURTFl48STFJMwkQjUTDtixq+Av93P6iBJFTgg1JL8QWBGT4QfDX7gDIyNE3nEBO6D0Rh9+5z9rprr19dTa/XW2KHl4YFYAfwCHAG7HAGgkOQKcAUYAowBZgCO6wAY5AxyBhkDDIGdxgC/M8QY5AxyBhkDDIGGYM7rIAyBgeDAYrFIkajEYxGIwKBAA4PDzckpd+322243W54PJ5P5f6Omh9tqiTAfD5HNpuFVqvFyckJms0m9vf3EY/H1/u9vb0hn89jsVj8kwDfUfNviisJ8PLygru7O4TDYVgsFtDh9Xo9NBrNes9cLgeTybThgKenJ1SrVXGf1WoVDup2u4jFYhiPx1I1P7XVBxcoCVCr1UBfTqcTrVYLe3t7OD8/x/HxsdiOPqNGo9Eo0un02gHkBhJmuVzC7/fj5uYGXq8XZ2dnop5Mzf8iwMPDAxqNBmw2GxwOBx4fHzGdTpFMJkVzNB7UGAmSSqU2RoDmnETQ6XQiOyKRiHCOSk0ZEZQcUKlU8Pz8LA5vNptRr9eFCJQBFHq//szG5eWlGA1ywOnpqQhBapoWPfl+vw+fzweXyyU+U635VRGUBOh0OigUCggGg8IFK/teXV3h/v4ew+Hwj/OQU4gUq/w4ODgQrkkkEmKEVGp+tXm6XkkAOngmk4HBYBAjQA6gEKRmyOL05GnR99vbW9jtdjEGdP319bUIR8oA+pnG5OLiQoghU5OElFlKAtCGr6+vKJfLmEwm64aosd/XbDbbyIBSqSSeNKU+HXzlnFAohKOjI6maMs0rO0B20590n7IDflIzMmdhAfiNEL8R4jdC/EZIJj235R6mAFOAKcAUYApsS6LL9MEUYAowBZgCTAGZ9NyWe5gCTAGmAFOAKbAtiS7TB1Ng1ynwDkxRe58vH3FfAAAAAElFTkSuQmCC">
-                                        </a>
-                                        <div class="media-body">
-                                            <small class="pull-right time"><i class="fa fa-clock-o"></i> 12:10am</small>
-                                            <h5 class="media-heading">Naimish Sakhpara</h5>
-                                            <small class="col-lg-10">Location H-2, Ayojan Nagar, Near Gate-3, Near
-                                                Shreyas Crossing Dharnidhar Derasar,
-                                                Paldi, Ahmedabad 380007, Ahmedabad,
-                                                India
-                                                Phone 091 37 669307
-                                                Email aapamdavad.district@gmail.com</small>
-                                        </div>
-                                    </div>
-                                    <div class="alert alert-info msg-date">
-                                        <strong>Today</strong>
-                                    </div>
-                                    <div class="media msg">
-                                        <a class="pull-left" href="#">
-                                            <img class="media-object" data-src="holder.js/64x64" alt="64x64"
-                                                style="width: 32px; height: 32px;"
-                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAACqUlEQVR4Xu2Y60tiURTFl48STFJMwkQjUTDtixq+Av93P6iBJFTgg1JL8QWBGT4QfDX7gDIyNE3nEBO6D0Rh9+5z9rprr19dTa/XW2KHl4YFYAfwCHAG7HAGgkOQKcAUYAowBZgCO6wAY5AxyBhkDDIGdxgC/M8QY5AxyBhkDDIGGYM7rIAyBgeDAYrFIkajEYxGIwKBAA4PDzckpd+322243W54PJ5P5f6Omh9tqiTAfD5HNpuFVqvFyckJms0m9vf3EY/H1/u9vb0hn89jsVj8kwDfUfNviisJ8PLygru7O4TDYVgsFtDh9Xo9NBrNes9cLgeTybThgKenJ1SrVXGf1WoVDup2u4jFYhiPx1I1P7XVBxcoCVCr1UBfTqcTrVYLe3t7OD8/x/HxsdiOPqNGo9Eo0un02gHkBhJmuVzC7/fj5uYGXq8XZ2dnop5Mzf8iwMPDAxqNBmw2GxwOBx4fHzGdTpFMJkVzNB7UGAmSSqU2RoDmnETQ6XQiOyKRiHCOSk0ZEZQcUKlU8Pz8LA5vNptRr9eFCJQBFHq//szG5eWlGA1ywOnpqQhBapoWPfl+vw+fzweXyyU+U635VRGUBOh0OigUCggGg8IFK/teXV3h/v4ew+Hwj/OQU4gUq/w4ODgQrkkkEmKEVGp+tXm6XkkAOngmk4HBYBAjQA6gEKRmyOL05GnR99vbW9jtdjEGdP319bUIR8oA+pnG5OLiQoghU5OElFlKAtCGr6+vKJfLmEwm64aosd/XbDbbyIBSqSSeNKU+HXzlnFAohKOjI6maMs0rO0B20590n7IDflIzMmdhAfiNEL8R4jdC/EZIJj235R6mAFOAKcAUYApsS6LL9MEUYAowBZgCTAGZ9NyWe5gCTAGmAFOAKbAtiS7TB1Ng1ynwDkxRe58vH3FfAAAAAElFTkSuQmCC">
-                                        </a>
-                                        <div class="media-body">
-                                            <small class="pull-right time"><i class="fa fa-clock-o"></i> 12:10am</small>
+  <ul class="pagination justify-content-center">
+    <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">Previous</a></li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">4</a></li>
+    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+  </ul>
 
-                                            <h5 class="media-heading">Naimish Sakhpara</h5>
-                                            <small class="col-lg-10">Arnab Goswami: "Some people close to Congress Party
-                                                and close to the government had a #secret #meeting in a farmhouse in
-                                                Maharashtra in which Anna Hazare send some representatives and they had
-                                                a meeting in the discussed how to go about this all fast and how
-                                                eventually this will end."</small>
-                                        </div>
-                                    </div>
-                                    <div class="media msg">
-                                        <a class="pull-left" href="#">
-                                            <img class="media-object" data-src="holder.js/64x64" alt="64x64"
-                                                style="width: 32px; height: 32px;"
-                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAACqUlEQVR4Xu2Y60tiURTFl48STFJMwkQjUTDtixq+Av93P6iBJFTgg1JL8QWBGT4QfDX7gDIyNE3nEBO6D0Rh9+5z9rprr19dTa/XW2KHl4YFYAfwCHAG7HAGgkOQKcAUYAowBZgCO6wAY5AxyBhkDDIGdxgC/M8QY5AxyBhkDDIGGYM7rIAyBgeDAYrFIkajEYxGIwKBAA4PDzckpd+322243W54PJ5P5f6Omh9tqiTAfD5HNpuFVqvFyckJms0m9vf3EY/H1/u9vb0hn89jsVj8kwDfUfNviisJ8PLygru7O4TDYVgsFtDh9Xo9NBrNes9cLgeTybThgKenJ1SrVXGf1WoVDup2u4jFYhiPx1I1P7XVBxcoCVCr1UBfTqcTrVYLe3t7OD8/x/HxsdiOPqNGo9Eo0un02gHkBhJmuVzC7/fj5uYGXq8XZ2dnop5Mzf8iwMPDAxqNBmw2GxwOBx4fHzGdTpFMJkVzNB7UGAmSSqU2RoDmnETQ6XQiOyKRiHCOSk0ZEZQcUKlU8Pz8LA5vNptRr9eFCJQBFHq//szG5eWlGA1ywOnpqQhBapoWPfl+vw+fzweXyyU+U635VRGUBOh0OigUCggGg8IFK/teXV3h/v4ew+Hwj/OQU4gUq/w4ODgQrkkkEmKEVGp+tXm6XkkAOngmk4HBYBAjQA6gEKRmyOL05GnR99vbW9jtdjEGdP319bUIR8oA+pnG5OLiQoghU5OElFlKAtCGr6+vKJfLmEwm64aosd/XbDbbyIBSqSSeNKU+HXzlnFAohKOjI6maMs0rO0B20590n7IDflIzMmdhAfiNEL8R4jdC/EZIJj235R6mAFOAKcAUYApsS6LL9MEUYAowBZgCTAGZ9NyWe5gCTAGmAFOAKbAtiS7TB1Ng1ynwDkxRe58vH3FfAAAAAElFTkSuQmCC">
-                                        </a>
-                                        <div class="media-body">
-                                            <small class="pull-right time"><i class="fa fa-clock-o"></i> 12:10am</small>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
 
-                                            <h5 class="media-heading">Naimish Sakhpara</h5>
-                                            <small class="col-lg-10">Arnab Goswami: "Some people close to Congress Party
-                                                and close to the government had a #secret #meeting in a farmhouse in
-                                                Maharashtra in which Anna Hazare send some representatives and they had
-                                                a meeting in the discussed how to go about this all fast and how
-                                                eventually this will end."</small>
-                                        </div>
-                                    </div>
-
-                                    <div class="media msg">
-                                        <a class="pull-left" href="#">
-                                            <img class="media-object" data-src="holder.js/64x64" alt="64x64"
-                                                style="width: 32px; height: 32px;"
-                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAACqUlEQVR4Xu2Y60tiURTFl48STFJMwkQjUTDtixq+Av93P6iBJFTgg1JL8QWBGT4QfDX7gDIyNE3nEBO6D0Rh9+5z9rprr19dTa/XW2KHl4YFYAfwCHAG7HAGgkOQKcAUYAowBZgCO6wAY5AxyBhkDDIGdxgC/M8QY5AxyBhkDDIGGYM7rIAyBgeDAYrFIkajEYxGIwKBAA4PDzckpd+322243W54PJ5P5f6Omh9tqiTAfD5HNpuFVqvFyckJms0m9vf3EY/H1/u9vb0hn89jsVj8kwDfUfNviisJ8PLygru7O4TDYVgsFtDh9Xo9NBrNes9cLgeTybThgKenJ1SrVXGf1WoVDup2u4jFYhiPx1I1P7XVBxcoCVCr1UBfTqcTrVYLe3t7OD8/x/HxsdiOPqNGo9Eo0un02gHkBhJmuVzC7/fj5uYGXq8XZ2dnop5Mzf8iwMPDAxqNBmw2GxwOBx4fHzGdTpFMJkVzNB7UGAmSSqU2RoDmnETQ6XQiOyKRiHCOSk0ZEZQcUKlU8Pz8LA5vNptRr9eFCJQBFHq//szG5eWlGA1ywOnpqQhBapoWPfl+vw+fzweXyyU+U635VRGUBOh0OigUCggGg8IFK/teXV3h/v4ew+Hwj/OQU4gUq/w4ODgQrkkkEmKEVGp+tXm6XkkAOngmk4HBYBAjQA6gEKRmyOL05GnR99vbW9jtdjEGdP319bUIR8oA+pnG5OLiQoghU5OElFlKAtCGr6+vKJfLmEwm64aosd/XbDbbyIBSqSSeNKU+HXzlnFAohKOjI6maMs0rO0B20590n7IDflIzMmdhAfiNEL8R4jdC/EZIJj235R6mAFOAKcAUYApsS6LL9MEUYAowBZgCTAGZ9NyWe5gCTAGmAFOAKbAtiS7TB1Ng1ynwDkxRe58vH3FfAAAAAElFTkSuQmCC">
-                                        </a>
-                                        <div class="media-body">
-                                            <small class="pull-right time"><i class="fa fa-clock-o"></i> 12:10am</small>
-                                            <h5 class="media-heading">Naimish Sakhpara</h5>
-
-                                            <small class="col-lg-10">Arnab Goswami: "Some people close to Congress Party
-                                                and close to the government had a #secret #meeting in a farmhouse in
-                                                Maharashtra in which Anna Hazare send some representatives and they had
-                                                a meeting in the discussed how to go about this all fast and how
-                                                eventually this will end."</small>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                <div class="send-wrap ">
-
-                                    <textarea class="form-control send-message" rows="3"
-                                        placeholder="Write a reply..."></textarea>
-
-
-                                </div>
-                                <div class="btn-panel">
-                                    <a href="" class=" col-lg-3 btn   send-message-btn " role="button"><i
-                                            class="fa fa-cloud-upload"></i> Add Files</a>
-                                    <a href="" class=" col-lg-4 text-right btn   send-message-btn pull-right"
-                                        role="button"><i class="fa fa-plus"></i> Send Message</a>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <hr>
-
-            <div class="row border-bottom">
-                <div class="col-sm">
-                    Computadora PC Gamer 16GB RAM 500GB SSD
-                </div>
-                <div class="col-sm  ">
-                    <p>03/04/2018</p>
-                </div>
-                <div class="col-sm">
-                    <p>$24,196</p>
-                </div>
-                <div class="col-sm">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Enviar
-                        mensaje</button>
-                </div>
-            </div>
-
-
-            <hr>
-
-
-        </div> <!-- FIN container -->
-    </div> <!-- FIN jumbotron-->
-
-
-
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
-
-    <script src="historial.js"></script>
+  <script src="historial.js"></script>
 </body>
 
 </html>

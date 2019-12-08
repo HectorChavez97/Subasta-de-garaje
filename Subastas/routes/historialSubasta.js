@@ -10,9 +10,18 @@ router.get('/', async (req, res) => {
     if(token == undefined) return res.status(403).send("No estas loggeado")    
     let user = decodeToken(token);
 
-    let historialProduct = await Product.find({autor: user._id})
+    let historialProduct = (await Product.find())
 
-    res.status(200).send(historialProduct)
+    let myArray = []
+    for(i in historialProduct){
+        for(j in historialProduct[i].usuariosIn){
+            if(historialProduct[i].usuariosIn[j] ==  user._id){
+                myArray.push(historialProduct[i])
+            }
+        }
+    }
+
+    res.status(200).send(myArray)
 })
 
 function decodeToken(token){

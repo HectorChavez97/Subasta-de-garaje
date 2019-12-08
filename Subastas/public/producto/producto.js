@@ -95,8 +95,15 @@ function getTime(){
     m = (m < 10) ? "0" + m : m;
     s = (s < 10) ? "0" + s : s;
 
-    document.getElementById('days').textContent = d;
+    if(d == 0 && h == 0 && m == 0 && s == 0) {
+        document.getElementById('days').textContent = 0;
+        document.getElementById('hours').textContent = 0;
+        document.getElementById('minutes').textContent = 0;
+        document.getElementById('seconds').textContent = 0;
+        alert("El tiempo ha terminado")
+    }
 
+    document.getElementById('days').textContent = d;
     document.getElementById('hours').textContent = h;
     document.getElementById('minutes').textContent = m;
     document.getElementById('seconds').textContent = s;
@@ -143,30 +150,5 @@ function cookieExists() {
   
     } else {
         menuUsuario.classList.add('hidden');
-
-       /* menuUsuario.classList.add('hidden');
-        let colOne = container.querySelector('#colOne .link');
-        let colTwo = container.querySelector('#colTwo .link');
-        let colThree = container.querySelector('#colThree .link');
-        let colFour = container.querySelector('#colFour .link');
-        let colFive = container.querySelector('#colFive .link');
-        let colSix = container.querySelector('#colSix .link');
-        let colSeven = container.querySelector('#colSeven .link');
-        let colEight = container.querySelector('#colEight .link');
-        let colNine = container.querySelector('#colNine .link');
-
-
-        let modalAlert = document.getElementById('modalAlert')
-        colOne.addEventListener("mouseover", function(){ alert("Necesitas loguear para subastar");window.location.href = '/login';}); 
-        colTwo.addEventListener("mouseover", function(){ alert("Necesitas loguear para subastar"); window.location.href = '/login';});
-        colThree.addEventListener("mouseover", function(){ alert("Necesitas loguear para subastar"); window.location.href = '/login';});
-        colFour.addEventListener("mouseover", function(){ alert("Necesitas loguear para subastar");window.location.href = '/login';}); 
-        colFive.addEventListener("mouseover", function(){ alert("Necesitas loguear para subastar");window.location.href = '/login';}); 
-        colSix.addEventListener("mouseover", function(){ alert("Necesitas loguear para subastar");window.location.href = '/login';}); 
-        colSeven.addEventListener("mouseover", function(){ alert("Necesitas loguear para subastar");window.location.href = '/login';}); 
-        colEight.addEventListener("mouseover", function(){ alert("Necesitas loguear para subastar");window.location.href = '/login';}); 
-        colNine.addEventListener("mouseover", function(){ alert("Necesitas loguear para subastar");window.location.href = '/login';}); 
-*/
-
     }
 }

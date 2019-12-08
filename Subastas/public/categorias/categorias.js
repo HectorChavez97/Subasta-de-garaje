@@ -108,8 +108,11 @@ function setPrice(price, product){
 
 function getClock(col){ return col[3] }
 function setClock(clock, product){
+    let estatusEs 
+    product.activado? estatusEs="Activo":  estatusEs="No activo" 
+    
     let clockP = document.createElement("p");                   //crear la etiqueta <h4>
-    let node = document.createTextNode("");                   //crear el contenido que va dentro de h1
+    let node = document.createTextNode(estatusEs);                   //crear el contenido que va dentro de h1
     clockP.appendChild(node)
     clock.appendChild(clockP)
 }
