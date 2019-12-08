@@ -1,9 +1,9 @@
-let container = document.querySelector(".container")            //container que tiene el esqueleto de productos
-let actualCookie = document.cookie.indexOf('refreshtoken');
-let login = document.getElementById('login');
-let registro = document.getElementById('registro');
+let container   = document.querySelector(".container")            //container que tiene el esqueleto de productos
+let login       = document.getElementById('login');
+let registro    = document.getElementById('registro');
 let menuUsuario = document.getElementById('menuUsuario')
-
+let inputDatos  = document.getElementById('inputDatos')
+let actualCookie = document.cookie.indexOf('refreshtoken');
 
 cookieExists()
 loadProducts()
@@ -18,9 +18,9 @@ function cookieExists() {
 
 function loadProducts(){
     let req = new XMLHttpRequest()
-    req.open("GET","http://localhost:3000/api/inicio", true)
+    req.open("GET", "http://localhost:3000/api/inicio"  + window.location.href.toString().split(window.location.host)[1] , true)
     req.send();
-    
+ 
     req.onload = () => {      
         showProducts(JSON.parse(req.response))     
     };
@@ -150,4 +150,14 @@ function logout(){
      
         location.reload(); 
     };
+}
+
+function busqueda(){
+    if(inputDatos.value != ""){
+        console.log(inputDatos.value)
+        window.open("http://localhost:3000/?nombre=" + inputDatos.value, "_self")
+    }
+
+    console.log(inputDatos.value)
+
 }

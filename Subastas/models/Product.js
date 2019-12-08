@@ -43,10 +43,17 @@ let productSchema = mongoose.Schema({
         default: 0,
         required: true
     },
+<<<<<<< HEAD
     activado:{
         type:String,
         required:true,
         default: 'active'
+=======
+    precioInicial:{
+        type:Boolean,
+        default: true,
+        required: true
+>>>>>>> b165245823bb1a96956fda57f3da81bd9e33a3fa
     }
 });
 

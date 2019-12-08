@@ -1,11 +1,18 @@
 const express = require('express');
-const router = express.Router();
 const Product = require('../models/Product')
+const atob    = require('atob');
+const router = express.Router();
+
 
 //INSERTAR http://localhost:3000/api/publicar/
 router.post('/', async(req, res) => {
     
     try{
+        let token = req.cookies.refreshtoken
+
+        if(token == undefined) return res.status(403).send("No estas loggeado")    
+        let me = decodeToken(token);
+
         let {
             titulo,
             descripcion,
@@ -14,12 +21,11 @@ router.post('/', async(req, res) => {
             estado,
             finFechaDia,
             finFechaHora,
-            autor,
             precioInicial
         } = req.body;
 
         if(titulo != undefined && descripcion != undefined && image != undefined && estado != undefined && categoria != undefined &&
-             finFechaDia != undefined && finFechaHora && precioInicial != undefined && autor != undefined) {
+             finFechaDia != undefined && finFechaHora && precioInicial != undefined) {
                     
                     let product = new Product({
                     titulo: req.body.titulo, 
@@ -29,7 +35,7 @@ router.post('/', async(req, res) => {
                     estado: req.body.estado,
                     finFechaDia: req.body.finFechaDia,
                     finFechaHora: req.body.finFechaHora,
-                    autor: req.body.autor,
+                    autor: me,
                     precioInicial: req.body.precioInicial,
                     precioActual: req.body.precioInicial
                 });
@@ -41,6 +47,7 @@ router.post('/', async(req, res) => {
             }
 
     } catch(err) {
+        console.log(err)
         res.status(400).send({
             error: 'ocurrió un error',
             detalle: err
@@ -48,23 +55,9 @@ router.post('/', async(req, res) => {
     }
 })
 
-//OBTENER POR TITULO
-router.get('/', (req, res) => {
-    if(!req.query.titulo) {
-        return res.status(400).send('Falta un parametro: titulo de subasta');
-    }
-    Product.find({ //find() -> varios mismo nombre
-        titulo: new RegExp(req.query.titulo, 'i')
-    }).then(doc =>{res.json(doc)})
-    .catch(err => {
-        res.status(500).json(err);
-    })
-}) 
-
-
 function decodeToken(token){
     var playload = JSON.parse(atob(token.split('.')[1]));
-    console.log(playload);
+    return playload["user"]
 };
 
 
