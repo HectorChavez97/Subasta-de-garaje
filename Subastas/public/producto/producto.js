@@ -101,7 +101,7 @@ function getTime(){
     m = (m < 10) ? "0" + m : m;
     s = (s < 10) ? "0" + s : s;
 
-    if(d == 0 && h == 0 && m == 0 && s == 0) {
+    if(d <= 0 && h <= 0 && m <= 0 && s <= 0) {
         document.getElementById('days').textContent = 0;
         document.getElementById('hours').textContent = 0;
         document.getElementById('minutes').textContent = 0;
@@ -144,20 +144,11 @@ function onClickButton(){
         };
     }
 }
-/*
-function finalizacion(){
-    let req = new XMLHttpRequest()
-    req.open("POST","http://localhost:3000/api/producto/:" + productId, true)
-    req.setRequestHeader('Content-Type','application/json')
-    req.send(JSON.stringify(new getStatus('modificacion')))
 
-    req.onload = () => {      
-        if(req.status == 200){
-             alert("Oferta exitosa")
-        }   
-        else  alert("Oferta fallida")
-    };
-}*/
+function finalizacion(){
+    let table = document.getElementsByTagName('table');
+    table.style.display = 'none';
+}
 
 function getStatus(aStatus) {
 this.status = aStatus;

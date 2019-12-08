@@ -92,7 +92,7 @@ function setImage(image, product){
 function getPrice(col){ return col[2] }
 function setPrice(price, product){
     let priceP = document.createElement("p");                   //crear la etiqueta <h3>
-    let node = document.createTextNode("Precio inicial: $" + product.precioInicial);  //crear el contenido que va dentro de h1
+    let node = document.createTextNode("Precio actual: $" + product.precioActual);  //crear el contenido que va dentro de h1
     priceP.appendChild(node);                                   //agrega el contenido del nodo (node)
     price.appendChild(priceP)
 }
