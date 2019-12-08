@@ -27,6 +27,8 @@ app.use('/registro'     ,express.static(__dirname+"/public/registro"))
 app.use('/publicar'     ,express.static(__dirname + "/public/publicar"))
 app.use('/productos/:id',express.static(__dirname + "/public/producto"));
 app.use('/historial'    ,express.static(__dirname + "/public/historialSubasta"));
+app.use('/editar'       ,express.static(__dirname + "/public/editarSubasta"));
+
 
 app.use('/api/inicio',  inicioRouter);
 app.use('/api/login',   loginRouter);

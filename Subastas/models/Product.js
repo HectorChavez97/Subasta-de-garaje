@@ -42,6 +42,11 @@ let productSchema = mongoose.Schema({
         type: Number,
         default: 0,
         required: true
+    },
+    activado:{
+        type:String,
+        required:true,
+        default: 'active'
     }
 });
 

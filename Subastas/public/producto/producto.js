@@ -3,6 +3,7 @@ let actualCookie = document.cookie.indexOf('refreshtoken');
 let login = document.getElementById('login');
 let registro = document.getElementById('registro');
 let menuUsuario = document.getElementById('menuUsuario')
+let table = document.getElementsByClassName('table');
 
 let mimage       = document.getElementById("img")
 let mtitle       = document.getElementById("title")
@@ -12,6 +13,11 @@ let mtiempo      = document.getElementById("tiempo")
 let msubasta     = document.getElementById("subasta")
 let msubastar    = document.getElementById("subastar")
 let subastaVal   = document.getElementById("subastaValue")
+
+let days   = document.getElementById("days");
+let hours   = document.getElementById("hours");
+let minutes   = document.getElementById("minutes");
+let seconds   = document.getElementById("seconds");
 
 
 let response;
@@ -95,8 +101,16 @@ function getTime(){
     m = (m < 10) ? "0" + m : m;
     s = (s < 10) ? "0" + s : s;
 
-    document.getElementById('days').textContent = d;
+    if(d == 0 && h == 0 && m == 0 && s == 0) {
+        document.getElementById('days').textContent = 0;
+        document.getElementById('hours').textContent = 0;
+        document.getElementById('minutes').textContent = 0;
+        document.getElementById('seconds').textContent = 0;
+        alert('todo cero');
+        finalizacion();
+    }
 
+    document.getElementById('days').textContent = d;
     document.getElementById('hours').textContent = h;
     document.getElementById('minutes').textContent = m;
     document.getElementById('seconds').textContent = s;
@@ -127,6 +141,32 @@ function onClickButton(){
             else  alert("Oferta fallida")
         };
     }
+}
+/*
+function finalizacion(){
+    let req = new XMLHttpRequest()
+    req.open("POST","http://localhost:3000/api/producto/:" + productId, true)
+    req.setRequestHeader('Content-Type','application/json')
+    req.send(JSON.stringify(new getStatus('modificacion')))
+
+    req.onload = () => {      
+        if(req.status == 200){
+             alert("Oferta exitosa")
+        }   
+        else  alert("Oferta fallida")
+    };
+}*/
+
+function getStatus(aStatus) {
+this.status = aStatus;
+}
+
+function getHour(fHora) {
+    this.finFechaHora = fHora
+}
+
+function getDay(fDia) {
+        this.finFechaDia = fDia
 }
 
 function getForm(pActual){
