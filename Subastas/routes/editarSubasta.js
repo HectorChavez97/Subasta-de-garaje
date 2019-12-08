@@ -4,6 +4,7 @@ const Producto  = require('../models/Product')
 
 
 router.put('/:id', async (req, res) => {
+    console.log("entro")
     let id = req.body.id;
     let producto =  await Producto.findOne({id:id})
     if(req.body.titulo) {

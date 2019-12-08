@@ -89,14 +89,14 @@ function setLink(link, product) {
    if(actualCookie != -1){
     let button = document.createElement("button")
     let node = document.createTextNode("subastar")
-    button.addEventListener("click", () => window.open(window.location.pathname + "productos/" + product._id, "_self"))
+    button.addEventListener("click", () => window.open("http://localhost:3000/editar/" + product._id, "_self"))
     button.appendChild(node)
     link.appendChild(button)
    }
    else{
     let button = document.createElement("button")
     let node = document.createTextNode("subastar")
-    button.addEventListener("click", () => window.open(window.location.pathname + "login/", "_self"))
+    button.addEventListener("click", () => window.open("http://localhost:3000/login/", "_self"))
     button.appendChild(node)
     link.appendChild(button)
    }
