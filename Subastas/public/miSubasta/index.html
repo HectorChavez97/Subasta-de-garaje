@@ -1,266 +1,200 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+<a href=""></a>
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <!-- Font Awesome -->
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <!-- Font Awesome -->
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
-    <!--Fontawesome CDN-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <!--Fontawesome CDN-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
-    <!--Custom styles-->
-    <link rel="stylesheet" type="text/css" href="../stylesheet.css">
+  <!--Custom styles-->
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 
 <body>
-    <nav class="mb-1 navbar navbar-expand-lg navbar-dark default-color">
-        <a id="link" href="/"><img class="logo"
-                src="https://jumpseller.s3.eu-west-1.amazonaws.com/store/alfonso-dumas/assets/subastas.png" alt=""></a>
+  <nav class="mb-1 navbar navbar-expand-lg navbar-dark default-color">
+    <a id="link" href="/"><img class="logo"
+        src="https://jumpseller.s3.eu-west-1.amazonaws.com/store/alfonso-dumas/assets/subastas.png" alt=""></a>
 
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav mr-auto">
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav mr-auto">
 
-                <li class="nav-item active">
-                    <a class="nav-link" href="/">Inicio <span class="sr-only">(current)</span></a>
-                </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Inicio <span class="sr-only">(current)</span></a>
+        </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Nosotros</a>
-                </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Nosotros</a>
+        </li>
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">Categorias
-                    </a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Categorias
+          </a>
 
-                    <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
-                        <a class="dropdown-item" href="/electronica">Electronica</a>
-                        <a class="dropdown-item" href="/hogar">Hogar</a>
-                        <a class="dropdown-item" href="/ropa">Ropa</a>
-                    </div>
-                </li>
+          <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
+            <a class="dropdown-item" onclick="electronica()">Electronica</a>
+            <a class="dropdown-item" onclick="hogar()">Hogar</a>
+            <a class="dropdown-item" onclick="ropa()">Ropa</a>
+          </div>
+        </li>
 
-                <li class="nav-item dropdown" id="menuUsuario">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false"> <i class="fas fa-user"></i>
-                    </a>
+        <li class="nav-item dropdown" id="menuUsuario">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false"> <i class="fas fa-user"></i>
+          </a>
 
-                    <div class="dropdown-menu dropdown-menu-right dropdown-default"
-                        aria-labelledby="navbarDropdownMenuLink-333">
-                        <a class="dropdown-item" href="/login">Mis subastas</a>
-                        <a class="dropdown-item" href="/registro">Subastas activas</a>
-                        <a class="dropdown-item" href="/login">Historial de subastas</a>
-                        <a class="dropdown-item" href="/registro">Publicar</a>
-                    </div>
-                </li>
-            </ul>
+          <div class="dropdown-menu dropdown-menu-right dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
+            <a class="dropdown-item" href="/login">Mis subastas</a>
+            <a class="dropdown-item" href="/registro">Subastas activas</a>
+            <a class="dropdown-item" href="/login">Historial de subastas</a>
+            <a class="dropdown-item" href="/publicar">Publicar</a>
 
-            <ul class="navbar-nav ml-auto nav-flex-icons">
-                <li class="nav-item" id="login">
-                    <a class="nav-link" href="/login">Iniciar sesion</a>
-                </li>
-
-                <li class="nav-item" id="registro">
-                    <a class="nav-link" href="/registro">Registro</a>
-                </li>
-            </ul>
-
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-
-        </div>
-    </nav>
-    <div class="jumbotron">
-
-        <h1 class="display-3">Subastando</h1>
-        <p>Aqui se muestran los articulos propios que estas subastando por tu cuenta</p>
-
-        <hr class="my-2">
-
-        <!-- Empieza lista de articulos -->
-
-        <div class="container">
-            <div class="row border-bottom-0">
-                <div class="col-sm">
-                    <h2>ID</h2>
-                </div>
-                <div class="col-sm">
-                    <h2>Artículo</h2>
-                </div>
-                <div class="col-sm">
-                    <h2>Status</h2>
-                </div>
-                <div class="col-sm">
-                    <h2>Precio</h2>
-                </div>
-                <div class="col-sm">
-                    <h2>Editar subasta</h2>
-                </div>
-            </div>
-            <hr>
-            <div class="row border-bottom">
-                <div class="col-sm">
-                    67899
-                </div>
-                <div class="col-sm">
-                    Televisión Samsung 60" Smart TV
-                </div>
-                <div class="col-sm  ">
-                    <p>Activa</p>
-                </div>
-                <div class="col-sm">
-                    <p>$36,000</p>
-                </div>
-                <div class="col-sm">
-                    <a href="editar.html"><button type="button" class="btn btn-primary"><i class="fa fa-pencil"
-                                aria-hidden="true"></i>
-                            Editar </button></a>
-                </div>
-            </div>
-            <hr>
-            <div class="row border-bottom">
-
-                <div class="col-sm">
-                    67899
-                </div>
-                <div class="col-sm">
-                    Cámara Go Pro 4K Sport
-                </div>
-                <div class="col-sm  ">
-                    <p>Activa</p>
-                </div>
-                <div class="col-sm">
-                    <p>$2,356</p>
-                </div>
-                <div class="col-sm">
-                    <a href="editar.html"><button type="button" class="btn btn-primary"><i class="fa fa-pencil"
-                                aria-hidden="true"></i>
-                            Editar </button></a>
-                </div>
-            </div>
-            <hr>
-
-            <div class="row border-bottom">
-                <div class="col-sm">
-                    69998
-                </div>
-                <div class="col-sm">
-                    Reloj Rolex Oro
-                </div>
-                <div class="col-sm ">
-                    <p>Finalizada</p>
-                </div>
-                <div class="col-sm">
-                    <p>$43,000</p>
-                </div>
-                <div class="col-sm">
-                    <a href="editar.html"><button type="button" class="btn btn-primary"><i class="fa fa-pencil"
-                                aria-hidden="true"></i>
-                            Editar </button></a>
-                </div>
+            <div class="dropdown-divider"></div>
+              <a class="dropdown-item" onclick="logout()">Cerrar sesion</a>
             </div>
 
-            <hr>
+          </div>
+        </li>
+      </ul>
 
-            <div class="row border-bottom">
-                <div class="col-sm">
-                    70877
-                </div>
-                <div class="col-sm">
-                    Refresco Coca-Cola
-                </div>
-                <div class="col-sm  ">
-                    <p>Finalizada</p>
-                </div>
-                <div class="col-sm">
-                    <p>$9</p>
-                </div>
-                <div class="col-sm">
-                    <a href="editar.html"><button type="button" class="btn btn-primary"><i class="fa fa-pencil"
-                                aria-hidden="true"></i>
-                            Editar </button></a>
-                </div>
-            </div>
+      <ul class="navbar-nav ml-auto nav-flex-icons">
+        <li class="nav-item" id="login">
+          <a class="nav-link" href="/login">Iniciar sesion</a>
+        </li>
 
-            <hr>
+        <li class="nav-item" id="registro">
+          <a class="nav-link" href="/registro">Registro</a>
+        </li>
+      </ul>
 
-            <div class="row border-bottom">
-                <div class="col-sm">
-                    71565
-                </div>
-                <div class="col-sm">
-                    Computadora PC Gamer 16GB RAM 500GB SSD
-                </div>
-                <div class="col-sm  ">
-                    <p>Finalizada</p>
-                </div>
-                <div class="col-sm">
-                    <p>$24,196</p>
-                </div>
-                <div class="col-sm">
-                    <a href="editar.html"><button type="button" class="btn btn-primary"><i class="fa fa-pencil"
-                                aria-hidden="true"></i>
-                            Editar </button></a>
-                </div>
-            </div>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
 
+    </div>
+  </nav>
 
-            <hr>
+  <h1 class="display-3 text-center" id="tituloCategoria"></h1>
+  <hr class="my-2">
+  <div id="modalAlert"></div>
 
-            <div class="row border-bottom">
-                <div class="col-sm">
-                    81676
-                </div>
-                <div class="col-sm">
-                    Adidas Yeezys
-                </div>
-                <div class="col-sm  ">
-                    <p>Finalizada</p>
-                </div>
-                <div class="col-sm">
-                    <p>$4,998</p>
-                </div>
-                <div class="col-sm">
-                    <a href="editar.html"><button type="button" class="btn btn-primary"><i class="fa fa-pencil"
-                                aria-hidden="true"></i>
-                            Editar </button></a>
-                </div>
-            </div>
+  <div class="container">
+      <div class="row border-bottom-0">
+          <div class="col-sm text-center">
+              <h2>Artículo</h2>
+          </div>
+          <div class="col-sm text-center">
+              <h2>Precio</h2>
+          </div>
+          <div class="col-sm text-center">
+              <h2>Status</h2>
+          </div>
+          <div class="col-sm text-center">
+              <h2>Editar</h2>
+          </div>
+      </div>
+      <hr>
+      
+      <div class="row" id="rowOne">
+          <div class="col-sm title"> </div>
+          <div class="col-sm price"></div>
+          <div class="col-sm estatus"></div>
+          <div class="col-sm link"></div>
+      </div>
 
+      <div class="row" id="rowTwo">
+          <div class="col-sm title"> </div>
+          <div class="col-sm price"></div>
+          <div class="col-sm estatus"></div>
+          <div class="col-sm link"></div>
+      </div>
 
+      <div class="row" id="rowThree">
+          <div class="col-sm title"> </div>
+          <div class="col-sm price"></div>
+          <div class="col-sm estatus"></div>
+          <div class="col-sm link"></div>
+      </div>
 
+      <div class="row" id="rowFour">
+          <div class="col-sm title"> </div>
+          <div class="col-sm price"></div>
+          <div class="col-sm estatus"></div>
+          <div class="col-sm link"></div>
+      </div>
 
+      <div class="row" id="rowFive">
+          <div class="col-sm title"> </div>
+          <div class="col-sm price"></div>
+          <div class="col-sm estatus"></div>
+          <div class="col-sm link"></div>
+      </div>
 
+      <div class="row" id="rowSix">
+          <div class="col-sm title"> </div>
+          <div class="col-sm price"></div>
+          <div class="col-sm estatus"></div>
+          <div class="col-sm link"></div>
+      </div>
 
-        </div> <!-- FIN container -->
-    </div> <!-- FIN jumbotron-->
+      <div class="row" id="rowSeven">
+          <div class="col-sm title"> </div>
+          <div class="col-sm price"></div>
+          <div class="col-sm estatus"></div>
+          <div class="col-sm link"></div>
+      </div>
 
+      <div class="row" id="rowEight">
+          <div class="col-sm title"> </div>
+          <div class="col-sm price"></div>
+          <div class="col-sm estatus"></div>
+          <div class="col-sm link"></div>
+      </div>
 
+      <div class="row" id="rowNine">
+          <div class="col-sm title"> </div>
+          <div class="col-sm price"></div>
+          <div class="col-sm estatus"></div>
+          <div class="col-sm link"></div>
+      </div>
+  </div> <!-- FIN container -->
 
+  <ul class="pagination justify-content-center">
+    <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">Previous</a></li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">4</a></li>
+    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+  </ul>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+
+  <script src="misSubastas.js"></script>
 </body>
 
 </html>

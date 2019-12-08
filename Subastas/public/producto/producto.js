@@ -125,6 +125,8 @@ function onClickButton(){
                  alert("Oferta exitosa")
             }   
             else  alert("Oferta fallida")
+
+            location.reload(); 
         };
     }
 }

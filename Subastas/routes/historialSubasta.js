@@ -10,15 +10,14 @@ router.get('/', async (req, res) => {
     if(token == undefined) return res.status(403).send("No estas loggeado")    
     let user = decodeToken(token);
 
-    let historialProduct = await Product.find({})
-    console.log(user)
+    let historialProduct = await Product.find({autor: user._id})
 
-    res.send("historial")
+    res.status(200).send(historialProduct)
 })
 
 function decodeToken(token){
     var playload = JSON.parse(atob(token.split('.')[1]));
-    console.log(playload);
+    return playload["user"]
 };
 
 module.exports = router;
