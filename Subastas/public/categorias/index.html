@@ -45,22 +45,22 @@
           </a>
 
           <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
-            <a class="dropdown-item" href="/categorias/?categoria=electronica">Electronica</a>
-            <a class="dropdown-item" href="/categorias/?categoria=hogar">Hogar</a>
-            <a class="dropdown-item" href="/categorias/?categoria=ropa">Ropa</a>
+            <a class="dropdown-item" onclick="electronica()">Electronica</a>
+            <a class="dropdown-item" onclick="hogar()">Hogar</a>
+            <a class="dropdown-item" onclick="ropa()">Ropa</a>
           </div>
         </li>
-  
+
         <li class="nav-item dropdown" id="menuUsuario">
           <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false"> <i class="fas fa-user"></i>
           </a>
 
           <div class="dropdown-menu dropdown-menu-right dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
-            <a class="dropdown-item" href="/publicar">Publicar</a>
-            <a class="dropdown-item" href="/miSubasta">Mis subastas</a>
+            <a class="dropdown-item" href="/login">Mis subastas</a>
             <a class="dropdown-item" href="/registro">Subastas activas</a>
             <a class="dropdown-item" href="/login">Historial de subastas</a>
+            <a class="dropdown-item" href="/publicar">Publicar</a>
 
             <div class="dropdown-divider"></div>
               <a class="dropdown-item" onclick="logout()">Cerrar sesion</a>
@@ -88,90 +88,103 @@
     </div>
   </nav>
 
-  <h1 class="display-3 text-center">No dejes pasar estos productos!!</h1>
+  <h1 class="display-3 text-center" id="tituloCategoria"></h1>
   <hr class="my-2">
   <div id="modalAlert"></div>
 
   <div class="container">
-    <div class="row">
-      <div class="col-4" id="colOne">
-        <div class="title"></div>
-        <div class="image"></div>
-        <div class="price"></div>
-        <div class="clock"></div>
-        <div class="link"></div>
+      <div class="row border-bottom-0">
+          <div class="col-sm text-center">
+              <h2>Artículo</h2>
+          </div>
+          <div class="col-sm text-center">
+              <h2>Imagen</h2>
+          </div>
+          <div class="col-sm text-center">
+              <h2>Precio inicial</h2>
+          </div>
+          <div class="col-sm text-center">
+              <h2>Status</h2>
+          </div>
+          <div class="col-sm text-center">
+              <h2>Subastar</h2>
+          </div>
+      </div>
+      <hr>
+      
+      <div class="row" id="rowOne">
+          <div class="col-sm title"> </div>
+          <div class="col-sm image"></div>
+          <div class="col-sm price"></div>
+          <div class="col-sm estatus"></div>
+          <div class="col-sm link"></div>
       </div>
 
-      <div class="col-4" id="colTwo">
-        <div class="title"></div>
-        <div class="image"></div>
-        <div class="price"></div>
-        <div class="clock"></div>
-        <div class="link"></div>
+      <div class="row" id="rowTwo">
+          <div class="col-sm title"> </div>
+          <div class="col-sm image"></div>
+          <div class="col-sm price"></div>
+          <div class="col-sm estatus"></div>
+          <div class="col-sm link"></div>
       </div>
 
-      <div class="col-4" id="colThree">
-        <div class="title"></div>
-        <div class="image"></div>
-        <div class="price"></div>
-        <div class="clock"></div>
-        <div class="link"></div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-4" id="colFour">
-        <div class="title"></div>
-        <div class="image"></div>
-        <div class="price"></div>
-        <div class="clock"></div>
-        <div class="link"></div>
+      <div class="row" id="rowThree">
+          <div class="col-sm title"> </div>
+          <div class="col-sm image"></div>
+          <div class="col-sm price"></div>
+          <div class="col-sm estatus"></div>
+          <div class="col-sm link"></div>
       </div>
 
-      <div class="col-4" id="colFive">
-        <div class="title"></div>
-        <div class="image"></div>
-        <div class="price"></div>
-        <div class="clock"></div>
-        <div class="link"></div>
+      <div class="row" id="rowFour">
+          <div class="col-sm title"> </div>
+          <div class="col-sm image"></div>
+          <div class="col-sm price"></div>
+          <div class="col-sm estatus"></div>
+          <div class="col-sm link"></div>
       </div>
 
-      <div class="col-4" id="colSix">
-        <div class="title"></div>
-        <div class="image"></div>
-        <div class="price"></div>
-        <div class="clock"></div>
-        <div class="link"></div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-4" id="colSeven">
-        <div class="title"></div>
-        <div class="image"></div>
-        <div class="price"></div>
-        <div class="clock"></div>
-        <div class="link"></div>
+      <div class="row" id="rowFive">
+          <div class="col-sm title"> </div>
+          <div class="col-sm image"></div>
+          <div class="col-sm price"></div>
+          <div class="col-sm estatus"></div>
+          <div class="col-sm link"></div>
       </div>
 
-      <div class="col-4" id="colEight">
-        <div class="title"></div>
-        <div class="image"></div>
-        <div class="price"></div>
-        <div class="clock"></div>
-        <div class="link"></div>
+      <div class="row" id="rowSix">
+          <div class="col-sm title"> </div>
+          <div class="col-sm image"></div>
+          <div class="col-sm price"></div>
+          <div class="col-sm estatus"></div>
+          <div class="col-sm link"></div>
       </div>
 
-      <div class="col-4" id="colNine">
-        <div class="title"></div>
-        <div class="image"></div>
-        <div class="price"></div>
-        <div class="clock"></div>
-        <div class="link"></div>
+      <div class="row" id="rowSeven">
+          <div class="col-sm title"> </div>
+          <div class="col-sm image"></div>
+          <div class="col-sm price"></div>
+          <div class="col-sm estatus"></div>
+          <div class="col-sm link"></div>
       </div>
-    </div>
-  </div>
-  </div>
+
+      <div class="row" id="rowEight">
+          <div class="col-sm title"> </div>
+          <div class="col-sm image"></div>
+          <div class="col-sm price"></div>
+          <div class="col-sm estatus"></div>
+          <div class="col-sm link"></div>
+      </div>
+
+      <div class="row" id="rowNine">
+          <div class="col-sm title"> </div>
+          <div class="col-sm image"></div>
+          <div class="col-sm price"></div>
+          <div class="col-sm estatus"></div>
+          <div class="col-sm link"></div>
+      </div>
+  </div> <!-- FIN container -->
+
 
   <ul class="pagination justify-content-center">
     <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">Previous</a></li>
@@ -194,7 +207,7 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
   </script>
 
-  <script src="inicio.js"></script>
+  <script src="categorias.js"></script>
 </body>
 
 </html>

@@ -18,10 +18,19 @@ function cookieExists() {
 
 function loadProducts(){
     let req = new XMLHttpRequest()
-    req.open("GET","http://localhost:3000/api/inicio", true)
+ //   req.open("GET","http://localhost:3000/api/categorias/?categoria=electronica", true)
+
+    req.open("GET","http://localhost:3000/api"  + window.location.href.toString().split(window.location.host)[1] , true)
     req.send();
     
     req.onload = () => {      
+        if(req.status == 200){
+        }        
+        else{
+            alert("No existe esa categoria")
+        }
+
+        console.log(window.location.href.toString().split(window.location.host)[1])
         showProducts(JSON.parse(req.response))     
     };
 }
@@ -38,7 +47,6 @@ function showProducts(products){
 
 function addData(col, product){
     let colElements = col.querySelectorAll('div')
-
     let title = getTitle(colElements)
     setTitle(title, product)
 
@@ -58,15 +66,15 @@ function addData(col, product){
 function getAllColumns(){
     let arrayCols = new Array()
 
-    arrayCols.push(document.getElementById('colOne'))
-    arrayCols.push(document.getElementById('colTwo'))
-    arrayCols.push(document.getElementById('colThree'))
-    arrayCols.push(document.getElementById('colFour'))
-    arrayCols.push(document.getElementById('colFive'))
-    arrayCols.push(document.getElementById('colSix'))
-    arrayCols.push(document.getElementById('colSeven'))
-    arrayCols.push(document.getElementById('colEight'))
-    arrayCols.push(document.getElementById('colNine'))
+    arrayCols.push(document.getElementById('rowOne'))
+    arrayCols.push(document.getElementById('rowTwo'))
+    arrayCols.push(document.getElementById('rowThree'))
+    arrayCols.push(document.getElementById('rowFour'))
+    arrayCols.push(document.getElementById('rowFive'))
+    arrayCols.push(document.getElementById('rowSix'))
+    arrayCols.push(document.getElementById('rowSeven'))
+    arrayCols.push(document.getElementById('rowEight'))
+    arrayCols.push(document.getElementById('rowNine'))
 
     return arrayCols
 }
@@ -89,10 +97,11 @@ function setImage(image, product){
     image.appendChild(img)
 }
 
+
 function getPrice(col){ return col[2] }
 function setPrice(price, product){
     let priceP = document.createElement("p");                   //crear la etiqueta <h3>
-    let node = document.createTextNode("Precio inicial: $" + product.precioInicial);  //crear el contenido que va dentro de h1
+    let node = document.createTextNode(product.precioInicial);  //crear el contenido que va dentro de h1
     priceP.appendChild(node);                                   //agrega el contenido del nodo (node)
     price.appendChild(priceP)
 }
@@ -110,31 +119,17 @@ function setLink(link, product) {
    if(actualCookie != -1){
     let button = document.createElement("button")
     let node = document.createTextNode("subastar")
-    button.addEventListener("click", () => window.open(window.location.pathname + "productos/" + product._id, "_self"))
+    button.addEventListener("click", () => window.open("http://localhost:3000/productos/" + product._id))
     button.appendChild(node)
     link.appendChild(button)
    }
    else{
     let button = document.createElement("button")
     let node = document.createTextNode("subastar")
-    button.addEventListener("click", () => window.open(window.location.pathname + "login/", "_self"))
+    button.addEventListener("click", () => window.open("http://localhost:3000/login/"))
     button.appendChild(node)
     link.appendChild(button)
    }
-}
-
-function catFilter(categoria){
-    console.log(categoria)
-    let req = new XMLHttpRequest()
-    req.open("GET", "http://localhost:3000/api/inicio/?categoria=" + categoria , true)
-    req.send();
-    
-    req.onload = () => {      
-        console.log(req.response)
-        if(req.status == 200){
-            showProducts(JSON.parse(req.response))     
-        }        
-    };
 }
 
 function logout(){
@@ -143,11 +138,12 @@ function logout(){
     req.send();
     
     req.onload = () => {      
-        if(req.status == 200) 
+        if(req.status == 200){
             alert("Cerraste sesion")
-        else
+        }
+        else{
             alert("No tienes una sesion activa")
-     
+        }
         location.reload(); 
     };
 }

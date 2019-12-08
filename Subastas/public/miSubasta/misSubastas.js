@@ -4,21 +4,10 @@ let login = document.getElementById('login');
 let registro = document.getElementById('registro');
 let menuUsuario = document.getElementById('menuUsuario')
 
-
-cookieExists()
 loadProducts()
-function cookieExists() {
-    if(actualCookie == 0) { //si es diferente de -1, existe la cookie
-        login.classList.add('hidden');
-        registro.classList.add('hidden');
-    } else {
-        menuUsuario.classList.add('hidden');
-    }
-}
-
 function loadProducts(){
     let req = new XMLHttpRequest()
-    req.open("GET","http://localhost:3000/api/inicio", true)
+    req.open("GET","http://localhost:3000/api/historial", true)
     req.send();
     
     req.onload = () => {      
@@ -42,14 +31,11 @@ function addData(col, product){
     let title = getTitle(colElements)
     setTitle(title, product)
 
-    let image = getImage(colElements)
-    setImage(image, product)
-
     let price = getPrice(colElements)
     setPrice(price, product)
 
-    let clock = getClock(colElements)
-    setClock(clock, product)
+    let status = getStatus(colElements)
+    setStatus(status, product)
 
     let link = getLink(colElements)
     setLink(link, product)
@@ -58,15 +44,15 @@ function addData(col, product){
 function getAllColumns(){
     let arrayCols = new Array()
 
-    arrayCols.push(document.getElementById('colOne'))
-    arrayCols.push(document.getElementById('colTwo'))
-    arrayCols.push(document.getElementById('colThree'))
-    arrayCols.push(document.getElementById('colFour'))
-    arrayCols.push(document.getElementById('colFive'))
-    arrayCols.push(document.getElementById('colSix'))
-    arrayCols.push(document.getElementById('colSeven'))
-    arrayCols.push(document.getElementById('colEight'))
-    arrayCols.push(document.getElementById('colNine'))
+    arrayCols.push(document.getElementById('rowOne'))
+    arrayCols.push(document.getElementById('rowTwo'))
+    arrayCols.push(document.getElementById('rowThree'))
+    arrayCols.push(document.getElementById('rowFour'))
+    arrayCols.push(document.getElementById('rowFive'))
+    arrayCols.push(document.getElementById('rowSix'))
+    arrayCols.push(document.getElementById('rowSeven'))
+    arrayCols.push(document.getElementById('rowEight'))
+    arrayCols.push(document.getElementById('rowNine'))
 
     return arrayCols
 }
@@ -79,33 +65,23 @@ function setTitle(title, product){
     title.appendChild(titleH1)
 }
 
-function getImage(col){ return col[1] }
-function setImage(image, product){
-    let img = document.createElement("img");                    //crear la etiqueta <img>
-    img.setAttribute('src', product.image);
-    img.classList.add('zoom');
-    img.height = 250
-    img.width = 250
-    image.appendChild(img)
-}
-
-function getPrice(col){ return col[2] }
+function getPrice(col){ return col[1] }
 function setPrice(price, product){
     let priceP = document.createElement("p");                   //crear la etiqueta <h3>
-    let node = document.createTextNode("Precio inicial: $" + product.precioInicial);  //crear el contenido que va dentro de h1
+    let node = document.createTextNode(product.precioActual);  //crear el contenido que va dentro de h1
     priceP.appendChild(node);                                   //agrega el contenido del nodo (node)
     price.appendChild(priceP)
 }
 
-function getClock(col){ return col[3] }
-function setClock(clock, product){
+function getStatus(col){ return col[2] }
+function setStatus(clock, product){
     let clockP = document.createElement("p");                   //crear la etiqueta <h4>
-    let node = document.createTextNode("");                   //crear el contenido que va dentro de h1
+    let node = document.createTextNode(product.precioActual);                   //crear el contenido que va dentro de h1
     clockP.appendChild(node)
     clock.appendChild(clockP)
 }
 
-function getLink(col) {return col[4]}
+function getLink(col) {return col[3]}
 function setLink(link, product) {
    if(actualCookie != -1){
     let button = document.createElement("button")
@@ -122,6 +98,13 @@ function setLink(link, product) {
     link.appendChild(button)
    }
 }
+
+
+
+
+
+
+
 
 function catFilter(categoria){
     console.log(categoria)

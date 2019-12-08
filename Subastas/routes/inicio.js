@@ -6,7 +6,7 @@ const router    = express.Router();
 
 
 router.get('/', verificarToken, async (req, res) => {
-    let products = await Product.find().skip().limit(9).sort('created') 
+    let  products = await Product.find().skip().limit(9).sort('created') 
 
     try {
         let token = await jwt.verify(req.token, 'secretKey')
@@ -14,17 +14,6 @@ router.get('/', verificarToken, async (req, res) => {
     } catch (err) {} 
 
     return res.status(403).send(products)
-})
-
-router.get('/:categoria', async (req, res) => {
-    if(req.params.categoria == 'undefined') {
-        return res.status(400).send('Falta un parametro: categoria de subasta');
-    }
-    
-    let product = Product.find({categoria: req.params.categoria}).limit(9);
-    if(!product) return res.status(403)
-    else return res.status(200).send(product);
-    
 })
 
 function verificarToken(req, res, next){

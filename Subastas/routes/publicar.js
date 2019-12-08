@@ -4,6 +4,7 @@ const Product = require('../models/Product')
 
 //INSERTAR http://localhost:3000/api/publicar/
 router.post('/', async(req, res) => {
+    
     try{
         let {
             titulo,
@@ -58,8 +59,16 @@ router.get('/', (req, res) => {
     .catch(err => {
         res.status(500).json(err);
     })
-}) /*
-//ACTUALIZAR PRODUCTO
+}) 
+
+
+function decodeToken(token){
+    var playload = JSON.parse(atob(token.split('.')[1]));
+    console.log(playload);
+};
+
+
+/*//ACTUALIZAR PRODUCTO
 router.patch('/', (req, res) => {
     if(!req.query.titulo) {
         return res.status(400).send('Falta titulo de la subasta para modificar');
