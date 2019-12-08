@@ -42,6 +42,11 @@ let productSchema = mongoose.Schema({
         type: Number,
         default: 0,
         required: true
+    },
+    precioInicial:{
+        type:Boolean,
+        default: true,
+        required: true
     }
 });
 
